@@ -56,6 +56,10 @@ video{
 #projects > div:nth-child(4) > div:nth-child(4) > div.col.s12.m12.l6.push-l6 > video{
   height: 220px;
 }
+div.row:nth-child(6) > div:nth-child(1) > div:nth-child(1) > img:nth-child(1) {
+  width: 100%;
+  height: 70%;
+}
 .personal-description{
   font-size: 1.2rem;
 }
