@@ -27,6 +27,13 @@ nav {
   rgba(229, 115, 115,1)
   );
 }
+hr {
+  width: 50%;
+}
+.center-text{
+  text-align: center;
+}
+
 /* rgb(255, 38, 0) */
 .shape-wrapper-red {
   background-color: rgb(255, 38, 0);
@@ -41,6 +48,7 @@ nav {
   background-image: linear-gradient(90deg, rgba(43,40,40,0.7553396358543417) 27%, rgba(42,44,45,0.7245273109243697) 100%), url(../img/stereo_beats_header.png);
   position: relative;
   background-size: cover;
+  background-position: left;
 }
 .developer-name {
   text-transform: uppercase;
@@ -82,6 +90,9 @@ span.part-2 {
   font-style: italic;
 }
 
+.card {
+  height: 220px;
+}
 @media only screen and (max-width: 1260px) {
   .intro-card-img {
     width: 20%;
