@@ -1,461 +1,426 @@
-<html lang="en">
+<%- include("./partials/header") %>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167222665-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'UA-167222665-1');
-  </script>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!-- Compiled and minified CSS -->
-  <link type="text/css" rel="stylesheet" href="/stylesheet/css/materialize.min.css" media="screen,projection" />
-  <script src="https://kit.fontawesome.com/9005dcba97.js" crossorigin="anonymous"></script>
-  <title>Gerald Addo-Tetteh</title>
-  <link rel="stylesheet" href="/stylesheet/style.css">
-</head>
-
-<body>
-  <header>
-    <!-- Navbar -->
-    <div class="navbar-fixed">
-      <nav class="nav-wrapper transparent">
-        <div class="container">
-          <a href="#" class="brand-logo">
-            MY PORTFOLIO
-          </a>
-          <a href="#" class="sidenav-trigger" data-target="mobile-menu">
-            <i class="material-icons">menu</i>
-          </a>
-          <!-- Large screen links -->
-          <ul class="right hide-on-med-and-down">
-            <li><a href="#skills">SKILLS</a></li>
-            <li><a href="#work">WORK</a></li>
-            <li><a href="#projects">PROJECTS</a></li>
-            <li><a
-                href="https://www.linkedin.com/in/gerald-addo-tetteh-a28101182?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BCmZEm4W8S2%2BgVeEJfcgVwg%3D%3D">
-                <i class="fab fa-linkedin"></i>
-              </a></li>
-            <li><a href="https://github.com/gerald-tetteh?tab=repositories">
-                <i class="fab fa-github"></i></a>
-            </li>
-          </ul>
-          <!-- Mobile Links -->
-          <ul class="sidenav grey lighten-2" id="mobile-menu">
-            <li>
-              <img
-                src="https://7gbypw.db.files.1drv.com/y4mTPnXHkiPMO__82YB8PHOKqTa_OJjnG-rN4_pAqpRTo9DaDIfOd6DPdBztglHOYEOCxJh34PsMYBHtldR5oxJHJIW7maT6vOjt0LeaJlfig68vaARpszkYd4bqnLphP7XiJZHm_RExRQp1KGH_moMz5Xy2X1uDsbdjZW_vX1XCl5zfXWFTwvJiENq2EQE7_wnt3ubnMKGjeHIZ11qwAxaUQ?width=459&height=575&cropmode=none"
-                alt="Profile Image" class="responsive-img">
-            </li>
-            <li class="center-align blue-grey-text text-darken-4">
-              <h4>Gerald Addo-Tetteh</h4>
-            </li>
-            <li class="black-text"><a href="#"><i class="material-icons grey-text text-darken-3 prefix">call</i>
-                <span>0505091004</span></a>
-            </li>
-            <li><a
-                href="https://www.linkedin.com/in/gerald-addo-tetteh-a28101182?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BCmZEm4W8S2%2BgVeEJfcgVwg%3D%3D"><i
-                  class="fab fa-linkedin"></i>
-                LinkedIn Profile
-              </a></li>
-            <li><a href=""><i class="fab fa-github"></i>
-                Github Repositories
-              </a></li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-    <div class="container">
-      <div class="center-align white-text heading">
-        <h1>
-          Welcome,
-          I'm Gerald
-        </h1>
+<link rel="stylesheet" href="/stylesheet/style.css">
+<header>
+  <!-- Navbar -->
+  <div class="navbar-fixed">
+    <nav class="nav-wrapper transparent">
+      <div class="container">
+        <a href="#" class="brand-logo">
+          MY PORTFOLIO
+        </a>
+        <a href="#" class="sidenav-trigger" data-target="mobile-menu">
+          <i class="material-icons">menu</i>
+        </a>
+        <!-- Large screen links -->
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#skills">SKILLS</a></li>
+          <li><a href="#work">WORK</a></li>
+          <li><a href="#projects">PROJECTS</a></li>
+          <li><a
+              href="https://www.linkedin.com/in/gerald-addo-tetteh-a28101182?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BCmZEm4W8S2%2BgVeEJfcgVwg%3D%3D">
+              <i class="fab fa-linkedin"></i>
+            </a></li>
+          <li><a href="https://github.com/gerald-tetteh?tab=repositories">
+              <i class="fab fa-github"></i></a>
+          </li>
+        </ul>
+        <!-- Mobile Links -->
+        <ul class="sidenav grey lighten-2" id="mobile-menu">
+          <li>
+            <img
+              src="https://7gbypw.db.files.1drv.com/y4mTPnXHkiPMO__82YB8PHOKqTa_OJjnG-rN4_pAqpRTo9DaDIfOd6DPdBztglHOYEOCxJh34PsMYBHtldR5oxJHJIW7maT6vOjt0LeaJlfig68vaARpszkYd4bqnLphP7XiJZHm_RExRQp1KGH_moMz5Xy2X1uDsbdjZW_vX1XCl5zfXWFTwvJiENq2EQE7_wnt3ubnMKGjeHIZ11qwAxaUQ?width=459&height=575&cropmode=none"
+              alt="Profile Image" class="responsive-img">
+          </li>
+          <li class="center-align blue-grey-text text-darken-4">
+            <h4>Gerald Addo-Tetteh</h4>
+          </li>
+          <li class="black-text"><a href="#"><i class="material-icons grey-text text-darken-3 prefix">call</i>
+              <span>0505091004</span></a>
+          </li>
+          <li><a
+              href="https://www.linkedin.com/in/gerald-addo-tetteh-a28101182?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BCmZEm4W8S2%2BgVeEJfcgVwg%3D%3D"><i
+                class="fab fa-linkedin"></i>
+              LinkedIn Profile
+            </a></li>
+          <li><a href=""><i class="fab fa-github"></i>
+              Github Repositories
+            </a></li>
+        </ul>
       </div>
+    </nav>
+  </div>
+  <div class="container">
+    <div class="center-align white-text heading">
+      <h1>
+        Welcome,
+        I'm Gerald
+      </h1>
     </div>
+  </div>
 
-  </header>
-  <!-- About Me Section -->
-  <section class="section about">
+</header>
+<!-- About Me Section -->
+<section class="section about">
+  <div class="container-fluid">
+    <img class="materialboxed circle responsive-img"
+      src="https://7gbypw.db.files.1drv.com/y4mTPnXHkiPMO__82YB8PHOKqTa_OJjnG-rN4_pAqpRTo9DaDIfOd6DPdBztglHOYEOCxJh34PsMYBHtldR5oxJHJIW7maT6vOjt0LeaJlfig68vaARpszkYd4bqnLphP7XiJZHm_RExRQp1KGH_moMz5Xy2X1uDsbdjZW_vX1XCl5zfXWFTwvJiENq2EQE7_wnt3ubnMKGjeHIZ11qwAxaUQ?width=459&height=575&cropmode=none"
+      alt="Profile Picture" style="width: 100px;">
+    <h4 class="center-align">
+      WHAT AM I ABOUT?
+    </h4>
+    <hr>
+    <p class="flow-text">
+      Technology has always been a fascination. This spurred an interest in engineering and
+      programming. I am familiar with the programming languages: Python, Javascript, Dart
+      and Java. I am studying electrical engineering at Ashesi University, and I also build
+      websites. Some of my work is below.
+    </p>
+  </div>
+</section>
+<!-- Main section -->
+<main>
+  <!-- Projects -->
+  <section class="section" id="projects">
     <div class="container-fluid">
-      <img class="materialboxed circle responsive-img"
-        src="https://7gbypw.db.files.1drv.com/y4mTPnXHkiPMO__82YB8PHOKqTa_OJjnG-rN4_pAqpRTo9DaDIfOd6DPdBztglHOYEOCxJh34PsMYBHtldR5oxJHJIW7maT6vOjt0LeaJlfig68vaARpszkYd4bqnLphP7XiJZHm_RExRQp1KGH_moMz5Xy2X1uDsbdjZW_vX1XCl5zfXWFTwvJiENq2EQE7_wnt3ubnMKGjeHIZ11qwAxaUQ?width=459&height=575&cropmode=none"
-        alt="Profile Picture" style="width: 100px;">
       <h4 class="center-align">
-        WHAT AM I ABOUT?
+        PROJECTS
       </h4>
       <hr>
-      <p class="flow-text">
-        Technology has always been a fascination. This spurred an interest in engineering and
-        programming. I am familiar with the programming languages: Python, Javascript, Dart
-        and Java. I am studying electrical engineering at Ashesi University, and I also build
-        websites. Some of my work is below.
-      </p>
+    </div>
+    <div class="parallax-container">
+      <div class="parallax">
+        <img class="responsive-img"
+          src="https://klxedw.db.files.1drv.com/y4miSJlhR1sU2wA-zF_6YKyI1erphbc-LbqwdN644gI7TlyLo-N8k_ZQgAyIewbM3S7RDvLUmaXqWR_6EibGHJ7AhkToL4DcvQlwCkObrEVHpnk8uOyGeVxz1R0ghgb23QYptValvbT-gvLiAR1_GAoesOq9quUmZD_-2w7e16PDh0xTiHGtWu81UhcSsDF8k-0Hux0R-n8gDUpsYAx7TsPRw?width=1944&height=4015&cropmode=none">
+      </div>
+    </div>
+    <!-- School Projects -->
+    <div class="container-fluid">
+      <h4 class="center-align project-headings">School Projects</h4>
+      <hr>
+      <div class="row">
+        <div class="col s12 m6 l4">
+          <div class="card hoverable">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img
+                src="https://klxedw.db.files.1drv.com/y4miSJlhR1sU2wA-zF_6YKyI1erphbc-LbqwdN644gI7TlyLo-N8k_ZQgAyIewbM3S7RDvLUmaXqWR_6EibGHJ7AhkToL4DcvQlwCkObrEVHpnk8uOyGeVxz1R0ghgb23QYptValvbT-gvLiAR1_GAoesOq9quUmZD_-2w7e16PDh0xTiHGtWu81UhcSsDF8k-0Hux0R-n8gDUpsYAx7TsPRw?width=1944&height=4015&cropmode=none"
+                class="responsive-img activator" alt="Weather Station">
+            </div>
+            <div class="card-content center-align">
+              <span class="card-title activator grey-text text-darken-4">Weather Station</span>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title center-align activator grey-text text-darken-4">Weather Station
+                <i class="material-icons right">close</i>
+              </span>
+              <p>
+                Developed a portable weather station using environmentally friendly materials.
+                The electrical components were developed using an Arduino Uno, a temperature
+                sensor, an infrared sensor and an LCD. The LCD was used to display the
+                temperature and wind speed. I built the electronic components and wrote the
+                Arduino needed to operate the weather station.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+          <div class="card hoverable">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img
+                src="https://gi66ta.db.files.1drv.com/y4mNPwdN6IfQOS9y9EztmrNQNfignfyzJ0eLJh7l8DusLkhfXbzJc-S-xcAjiM8NrdfAg9kOhMLE-lJ_Nj-wB1lgEV96yQXiYfLb0esFC6eP_q5NnGO6rR_fBDy0F-WrchBMN1zgjYkw9zseNZCoQ_AHYpr61Li_OHqWT0YzPNF9N6RZg3yySBHBE68w7V5z0U4H1dMjXWuGTBOUP4H1m1-qA?width=4032&height=1960&cropmode=none"
+                class="responsive-img activator" alt="Speed Boat">
+            </div>
+            <div class="card-content center-align">
+              <span class="card-title activator grey-text text-darken-4">Speed Boat</span>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title center-align activator grey-text text-darken-4">Speed Boat
+                <i class="material-icons right">close</i>
+              </span>
+              <p>
+                Build a speed boat that could support 2kg of extra weight.
+                The project applied principles of physics which we had studied that semester.
+                We also practised soldering and using some machines at the school workshop.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m12 l4">
+          <div class="card hoverable">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img
+                src="https://pjelww.db.files.1drv.com/y4m0Z3NuxhbuMJzV9u-IswWC9Qy0AYd86nhSKduNFT9smFM18xkYlUQfa9HT0qNYa7VWAziKkcbek12OqMmbCi7yScNectX1YMvXeDft-_2oOzK9eK8i9_WuHqoNw-EpLQ15riIWDNOai__RA1IJ14IO0ZgolADm2YoDTDoTBePyuFmRrk2IH4yB3dnKgZtakGS4LirLfHf3pvnLzGwGAu0HQ?width=1960&height=4032&cropmode=none"
+                width="1960" height="4032" class="activator" />
+            </div>
+            <div class="card-content center-align">
+              <span class="card-title activator grey-text text-darken-4">
+                Fire Alarm System
+              </span>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title center-align activator grey-text text-darken-4">
+                Fire Alarm System
+                <i class="material-icons right">close</i>
+              </span>
+              <p>
+                Developed a miniature fire alarm system which was entirely electronic.
+                Current and voltage calculations were applied. The system used coloured LED's
+                to represent the temperature variations in the room. A thermistor was used to
+                determine the temperature in the room and in the process, the amount of current
+                that should flow through it. Operational amplifers were used to turn on the
+                LED's when the voltage at non-inverting input is higher than the voltage at the
+                inverting input of the operational amplifier. When the temperature in the room
+                is high enough, a buzzer will go off to signify danger.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Personal Projects -->
+    <div class="container">
+      <h4 class="center-align project-headings">Personal Projects</h4>
+      <hr>
+      <div class="row">
+        <div class="col s12 m12 l6">
+          <iframe width="100%" height="315"
+            src="https://www.youtube.com/embed/0teBma7Qs0g?showinfo=0&modestbranding=1&autohide=1" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <br>
+        <div class="col s12 m12 l6">
+          <h4 class="center-align">Arduino with Python</h4>
+          <hr>
+          <p class="personal-description">
+            This project involved using Python with an Arduino to measure the distance from
+            an object and use that value to determine the length of a virtual cylinder
+            in real-time.
+          </p>
+          <a href="https://github.com/gerald-tetteh/Virtual-World-Arduino" class="btn waves-effect waves-light">
+            <i class="fab fa-github"></i>
+            Github Repository
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m12 l6 push-l6">
+          <iframe width="100%" height="315"
+            src="https://www.youtube.com/embed/WdArvA92qG0?showinfo=0&modestbranding=1&autohide=1" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <br>
+        <div class="col s12 m12 l6 pull-l6">
+          <h4 class="center-align">Seven Segment Display</h4>
+          <hr>
+          <p class="personal-description">
+            Developed a seven-segment display using LED's, transistors and an Arduino.
+            Based on the input in the Arduino code, low and high voltages are supplied to
+            the transistors which act as switches to control the operation of the LEDs so
+            that they display the desired number or letter.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m12 l6">
+          <div>
+            <img
+              src="https://u4ywna.db.files.1drv.com/y4m2TgoyP8sGLeCvWycxOvTEfl1rZs0khOQM6aOL9YT8aLrgJ6oXN7LqbxvY-hPi0qEetwqe54QlajnGD-jllzAdSDEPHIcaJZScsmvVVdFPNRP2kD-Qtkcbyx2vh_Sosi-_jvkoE2HKHnr_bc9NLL1NM67RrX6Bknn7MgkIoG3fBYEwqy5qrzjR0VVVYYBVEv8T2wD1IZvnBgnhkJtXAMOAw?width=1020&height=1020&cropmode=none"
+              alt="Python" class="responsive-img">
+          </div>
+        </div>
+        <div class="col s12 m12 l6">
+          <h4 class="center-align">Encryption Program with Python</h4>
+          <hr>
+          <p class="personal-description">
+            Developed a python based encryption programme that encrypts texts and images.
+            The programme uses four different encryption types based on the users choice.
+          </p>
+          <a href="https://github.com/gerald-tetteh/encryption-program-python" class="btn waves-effect waves-light">
+            <i class="fab fa-github"></i>
+            Github Repository
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m12 l6">
+          <div>
+            <img height="50%" width="100%" src="img/stereo_beats.png" alt="Stereo Beats">
+          </div>
+        </div>
+        <div class="col s12 m12 l6">
+          <h4 class="center-align">Stereobeats (Music App)</h4>
+          <hr>
+          <p class="personal-description">
+            Stereobeats music player provides users with a beautiful user interface to look through and listen to
+            their music. The application allows users to create playlists, listen to music, update the metadata of
+            their songs and much more. Stereobeats also provides the user the ability to view the music video of a
+            selected song on Youtube with just the push of a button.
+          </p>
+          <a href="/stereobeats" class="btn waves-effect waves-light">
+            Go to Site
+            <i class="large material-icons">audiotrack</i>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m12 l6">
+          <div class="news-img-container">
+            <img src="img/exclusive.png" alt="News App" class="news-app-img responsive-img">
+          </div>
+        </div>
+        <div class="col s12 m12 l6">
+          <h4 class="center-align">Exclusive (News App)</h4>
+          <hr>
+          <p class="personal-description">
+            Developed a news app using flutter for mobile phone. The application retrieves
+            data from a server in JSON format. The data is organised into a list of NewsItems.
+            NewsItems is a class that describes how the news should look like. Finally the data
+            is presented on the home screen in a list view. When the user clicks on any list item
+            they a redirected to a new page; the detail page. The detail page show the news image at
+            the top of the page and below it is the author, publisher and then the news text.
+          </p>
+          <a href="https://play.google.com/store/apps/details?id=com.addodevelop.exclusive"
+            class="btn waves-effect waves-light" target="_blank">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            Get From the Store
+          </a>
+        </div>
+      </div>
     </div>
   </section>
-  <!-- Main section -->
-  <main>
-    <!-- Projects -->
-    <section class="section" id="projects">
-      <div class="container-fluid">
-        <h4 class="center-align">
-          PROJECTS
-        </h4>
-        <hr>
-      </div>
-      <div class="parallax-container">
-        <div class="parallax">
-          <img class="responsive-img"
-            src="https://klxedw.db.files.1drv.com/y4miSJlhR1sU2wA-zF_6YKyI1erphbc-LbqwdN644gI7TlyLo-N8k_ZQgAyIewbM3S7RDvLUmaXqWR_6EibGHJ7AhkToL4DcvQlwCkObrEVHpnk8uOyGeVxz1R0ghgb23QYptValvbT-gvLiAR1_GAoesOq9quUmZD_-2w7e16PDh0xTiHGtWu81UhcSsDF8k-0Hux0R-n8gDUpsYAx7TsPRw?width=1944&height=4015&cropmode=none">
-        </div>
-      </div>
-      <!-- School Projects -->
-      <div class="container-fluid">
-        <h4 class="center-align project-headings">School Projects</h4>
-        <hr>
-        <div class="row">
-          <div class="col s12 m6 l4">
-            <div class="card hoverable">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img
-                  src="https://klxedw.db.files.1drv.com/y4miSJlhR1sU2wA-zF_6YKyI1erphbc-LbqwdN644gI7TlyLo-N8k_ZQgAyIewbM3S7RDvLUmaXqWR_6EibGHJ7AhkToL4DcvQlwCkObrEVHpnk8uOyGeVxz1R0ghgb23QYptValvbT-gvLiAR1_GAoesOq9quUmZD_-2w7e16PDh0xTiHGtWu81UhcSsDF8k-0Hux0R-n8gDUpsYAx7TsPRw?width=1944&height=4015&cropmode=none"
-                  class="responsive-img activator" alt="Weather Station">
-              </div>
-              <div class="card-content center-align">
-                <span class="card-title activator grey-text text-darken-4">Weather Station</span>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title center-align activator grey-text text-darken-4">Weather Station
-                  <i class="material-icons right">close</i>
-                </span>
-                <p>
-                  Developed a portable weather station using environmentally friendly materials.
-                  The electrical components were developed using an Arduino Uno, a temperature
-                  sensor, an infrared sensor and an LCD. The LCD was used to display the
-                  temperature and wind speed. I built the electronic components and wrote the
-                  Arduino needed to operate the weather station.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col s12 m6 l4">
-            <div class="card hoverable">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img
-                  src="https://gi66ta.db.files.1drv.com/y4mNPwdN6IfQOS9y9EztmrNQNfignfyzJ0eLJh7l8DusLkhfXbzJc-S-xcAjiM8NrdfAg9kOhMLE-lJ_Nj-wB1lgEV96yQXiYfLb0esFC6eP_q5NnGO6rR_fBDy0F-WrchBMN1zgjYkw9zseNZCoQ_AHYpr61Li_OHqWT0YzPNF9N6RZg3yySBHBE68w7V5z0U4H1dMjXWuGTBOUP4H1m1-qA?width=4032&height=1960&cropmode=none"
-                  class="responsive-img activator" alt="Speed Boat">
-              </div>
-              <div class="card-content center-align">
-                <span class="card-title activator grey-text text-darken-4">Speed Boat</span>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title center-align activator grey-text text-darken-4">Speed Boat
-                  <i class="material-icons right">close</i>
-                </span>
-                <p>
-                  Build a speed boat that could support 2kg of extra weight.
-                  The project applied principles of physics which we had studied that semester.
-                  We also practised soldering and using some machines at the school workshop.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col s12 m12 l4">
-            <div class="card hoverable">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img
-                  src="https://pjelww.db.files.1drv.com/y4m0Z3NuxhbuMJzV9u-IswWC9Qy0AYd86nhSKduNFT9smFM18xkYlUQfa9HT0qNYa7VWAziKkcbek12OqMmbCi7yScNectX1YMvXeDft-_2oOzK9eK8i9_WuHqoNw-EpLQ15riIWDNOai__RA1IJ14IO0ZgolADm2YoDTDoTBePyuFmRrk2IH4yB3dnKgZtakGS4LirLfHf3pvnLzGwGAu0HQ?width=1960&height=4032&cropmode=none"
-                  width="1960" height="4032" class="activator" />
-              </div>
-              <div class="card-content center-align">
-                <span class="card-title activator grey-text text-darken-4">
-                  Fire Alarm System
-                </span>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title center-align activator grey-text text-darken-4">
-                  Fire Alarm System
-                  <i class="material-icons right">close</i>
-                </span>
-                <p>
-                  Developed a miniature fire alarm system which was entirely electronic.
-                  Current and voltage calculations were applied. The system used coloured LED's
-                  to represent the temperature variations in the room. A thermistor was used to
-                  determine the temperature in the room and in the process, the amount of current
-                  that should flow through it. Operational amplifers were used to turn on the
-                  LED's when the voltage at non-inverting input is higher than the voltage at the
-                  inverting input of the operational amplifier. When the temperature in the room
-                  is high enough, a buzzer will go off to signify danger.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Personal Projects -->
-      <div class="container">
-        <h4 class="center-align project-headings">Personal Projects</h4>
-        <hr>
-        <div class="row">
-          <div class="col s12 m12 l6">
-            <iframe width="100%" height="315"
-              src="https://www.youtube.com/embed/0teBma7Qs0g?showinfo=0&modestbranding=1&autohide=1" frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <br>
-          <div class="col s12 m12 l6">
-            <h4 class="center-align">Arduino with Python</h4>
-            <hr>
-            <p class="personal-description">
-              This project involved using Python with an Arduino to measure the distance from
-              an object and use that value to determine the length of a virtual cylinder
-              in real-time.
-            </p>
-            <a href="https://github.com/gerald-tetteh/Virtual-World-Arduino" class="btn waves-effect waves-light">
-              <i class="fab fa-github"></i>
-              Github Repository
-            </a>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col s12 m12 l6 push-l6">
-            <iframe width="100%" height="315"
-              src="https://www.youtube.com/embed/WdArvA92qG0?showinfo=0&modestbranding=1&autohide=1" frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <br>
-          <div class="col s12 m12 l6 pull-l6">
-            <h4 class="center-align">Seven Segment Display</h4>
-            <hr>
-            <p class="personal-description">
-              Developed a seven-segment display using LED's, transistors and an Arduino.
-              Based on the input in the Arduino code, low and high voltages are supplied to
-              the transistors which act as switches to control the operation of the LEDs so
-              that they display the desired number or letter.
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col s12 m12 l6">
-            <div>
-              <img
-                src="https://u4ywna.db.files.1drv.com/y4m2TgoyP8sGLeCvWycxOvTEfl1rZs0khOQM6aOL9YT8aLrgJ6oXN7LqbxvY-hPi0qEetwqe54QlajnGD-jllzAdSDEPHIcaJZScsmvVVdFPNRP2kD-Qtkcbyx2vh_Sosi-_jvkoE2HKHnr_bc9NLL1NM67RrX6Bknn7MgkIoG3fBYEwqy5qrzjR0VVVYYBVEv8T2wD1IZvnBgnhkJtXAMOAw?width=1020&height=1020&cropmode=none"
-                alt="Python" class="responsive-img">
-            </div>
-          </div>
-          <div class="col s12 m12 l6">
-            <h4 class="center-align">Encryption Program with Python</h4>
-            <hr>
-            <p class="personal-description">
-              Developed a python based encryption programme that encrypts texts and images.
-              The programme uses four different encryption types based on the users choice.
-            </p>
-            <a href="https://github.com/gerald-tetteh/encryption-program-python" class="btn waves-effect waves-light">
-              <i class="fab fa-github"></i>
-              Github Repository
-            </a>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col s12 m12 l6">
-            <div>
-              <img src="img/news_app.jpg" alt="News App" class="responsive-img">
-            </div>
-          </div>
-          <div class="col s12 m12 l6">
-            <h4 class="center-align">News Mobile App</h4>
-            <hr>
-            <p class="personal-description">
-              Developed a news app using flutter for mobile phone. The application retrieves
-              data from a server in JSON format. The data is organised into a list of NewsItems.
-              NewsItems is a class that describes how the news should look like. Finally the data
-              is presented on the home screen in a list view. When the user clicks on any list item
-              they a redirected to a new page; the detail page. The detail page show the news image at
-              the top of the page and below it is the author, publisher and then the news text.
-            </p>
-            <a href="https://github.com/gerald-tetteh/News-App-for-QodeHub" class="btn waves-effect waves-light">
-              <i class="fab fa-github"></i>
-              Github Repository
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Work Experience & Education -->
-    <section class="section">
-      <div class="container">
-        <div class="row">
-          <div class="col s12">
-            <ul class="tabs">
-              <li id="work" class="tab col s4"><a href="#work_exp">Work Experience</a></li>
-              <li class="tab col s4"><a href="#education">Education</a></li>
-              <li id="skills" class="tab col s4"><a href="#skills_tab">Skills</a></li>
-            </ul>
-          </div>
-          <!-- work -->
-          <div id="work_exp" class="col s12">
-            <ul class="collapsible">
-              <li class="active">
-                <div class="collapsible-header">
-                  <img
-                    src="https://ubcipg.db.files.1drv.com/y4mwMN8lCSdZjsea07YUqvXGlTwgcltPiaO80Ou0nbYWVuaAaSP_V4EwGQjUQA0a-XuGPtVtHgEMVsCUBc907HHJStXmhHHIaHTx3NxSN1-8-6h2GZgkI7smOnjdfJbZt5jBCLH3NqN40w61WdIBbOb-aWlvGu8ohxSDMTFulHCMjeWBTIPkZ8VEJYduBFvUmDjs-WOUtRSvX_ADG3Ci6BjoA?width=64&height=64&cropmode=none"
-                    alt="Vodafone" class="responsive-img">
-                  <h4>Control Room Supervisor</h4>
-                </div>
-                <div class="collapsible-body">
-                  <span>
-                    Managed operations in the control room at the Vodafone Exchange.
-                    Assisted field engineers in connecting customers to telephone lines and
-                    the internet in the control room. Helped to update the records of customers
-                    in Teshie Nungua Estates.
-                  </span>
-                  <p>Jul 2019 - Aug 2019</p>
-                </div>
-              </li>
-              <li>
-                <div class="collapsible-header">
-                  <img
-                    src="https://joqmha.db.files.1drv.com/y4mD93nwUdDXI-iUwhx1s2aLge8213TgugVSiH0Qp6cip58Nh3do3D03P6bLtdh-hjivl8xcQPmkjlnma46mRE2fx2GM3jgl32su8tRZ640rPzPR4XSzi9WlwQFYNJVmdmnCT3R9t3MueJed2En3cvWnr5qdjFmsDDCxF9Cn2J0JELHI8_3H4gi6NhkJvyb-nIJIuNhZqP8RhMlqJw6dld5gQ?width=64&height=64&cropmode=none"
-                    alt="Nyaho Medical Centre" class="responsive-img">
-                  <h4>Support Systems Intern</h4>
-                </div>
-                <div class="collapsible-body">
-                  <span>
-                    Assisting with the repair and maintenance of equipment at
-                    Nyaho Medical Centre (Job Shadowing).
-                  </span>
-                  <p>Jun 2019</p>
-                </div>
-              </li>
-              <li>
-                <div class="collapsible-header">
-                  <img
-                    src="https://57kseg.db.files.1drv.com/y4m562DHvj8uK3RtRWZEFHgqFiWurCZfDkqwhVfEl4Cul5pcJNwQoHmvQCZtp86RUalYPIl0jHBPLBTgIgnwa-_X-jcsICz1eMFyyqeKFzX7VkCSyl6cUoNbrGtXnOhMbWcJgMYHn5LvfTs6pGAfVu_-PS3YqotW0pCxT45rPVkWgAuO7H5c057Yu2WUmGpeE0r15UxGzeS22gdvv9Ct2S1xQ?width=64&height=64&cropmode=none"
-                    alt="Charlotte's Memorial School" class="responsive-img">
-                  <h4>Library Assistant</h4>
-                </div>
-                <div class="collapsible-body">
-                  <span>
-                    Assisted librarian in managing the library and with book sales at the
-                    beginning of the academic year.
-                  </span>
-                  <p>May 2018 - Aug 2018</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <!-- Education -->
-          <div id="education" class="col s12">
-            <ul class="collection">
-              <li class="collection-item avatar">
-                <img
-                  src="https://9uedba.db.files.1drv.com/y4mTgEA2E7WSnKbano82mo_qidI5-ed33Sc2pa-q8RGZp1uFGkruXtf0zhFjeR5nCMjJc9APDjem1YcvTwOlP0JgRfmfqcjUGRNIcJPd-iguB3H1-3kJLerxZlJwBwUwlGE0Pc-IyaKFHEgLWlyGccMtIfCIHLUKotxEVrLZDx8etDvthDEHPTrqXCpquIhM4QEt-8xWsotzLMVYbkjXSxTLw?width=64&height=64&cropmode=none"
-                  alt="Ashesi University" class="circle">
-                <span class="title">Ashesi University</span>
-                <p>Electrical Engineering <br>
-                  <span>August 2018 to Present</span>
-                </p>
-              </li>
-              <li class="collection-item avatar">
-                <img
-                  src="https://ixxq4q.db.files.1drv.com/y4mZse9s1tSpYeqK9tUa3RmaJxcEhpToxrs3fQzoIkuLg8rFf-Gzim2IfGSCvKmIUiowd_jbtuBZjG3BKCZY_upvEE-NYJibmV3ys3c70H3RwSGbaPGbGRqy7m7QMaPh7M-s2FeO0LY9FozHuyUlv5I34SvfAOlX9T0GSPlk_E36dnJWYKVUtYZE4HIKTQ3AlyXVxFq4d1o91Fy1-tfDuwjXQ?width=64&height=64&cropmode=none"
-                  alt="Presbyterian Boys Secondary School" class="circle">
-                <span class="title">Presbyterian Boys Secondary School</span>
-                <p>General Science <br>
-                  <span>September 2015 to May 2018</span>
-                </p>
-              </li>
-            </ul>
-          </div>
-          <!-- Skills -->
-          <div id="skills_tab" class="col s12">
-            <ul class="collection">
-              <li class="collection-item avatar">
-                <i class="fas fa-code circle black"></i>
-                <span class="title">Web Development</span>
-                <p>
-                  Developing Websites with Node.js (Full Stack).
-                  Including this Portfolio.
-                </p>
-              </li>
-              <li class="collection-item avatar">
-                <i class="fas fa-mobile circle blue"></i>
-                <span class="title">Mobile App Development</span>
-                <p>
-                  Using Flutter and Java to Develop Mobile Applications.
-                </p>
-              </li>
-              <li class="collection-item avatar">
-                <img
-                  src="https://hanhvw.db.files.1drv.com/y4mo1EfrA_BNFzGr_26Y3rOozK4YhoQspknswqURA6dMeyje5deBe5UmGEPX1QiToLjkVAeIO0dRYBaB-TZA1jN-BNjbkhVirkgRAslTnIl2aZ33yZ1YjYfInxgpB7Cn-L3KhuS8bNiwnEYN-uiR-35wbrrUkbW-BGIXGXUeghcM5_qpE_Tque2Pg1yGnAQAYE3ZZgRFCE6bszbXKPSlCLhYA?width=64&height=64&cropmode=none"
-                  alt="Arduino" class="circle green">
-                <span class="title">Arduino Programming</span>
-                <p>
-                  Building Circuits Using Arduino. <br>
-                  These Include a Miniature
-                  Weather Station and a Device to Measure Distance
-                  From an Object and the Speed of Sound.
-                </p>
-              </li>
-              <li class="collection-item avatar">
-                <i class="fab fa-python circle green"></i>
-                <span class="title">Python Programming</span>
-                <p>
-                  Building Programs Using Python. <br>
-                  Such as an Encryption Program and some
-                  Desktop Applicaions.
-                </p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-    </section>
-
-  </main>
-
-  <footer class="page-footer grey darken-4">
+  <!-- Work Experience & Education -->
+  <section class="section">
     <div class="container">
       <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Gerald Addo-Tetteh</h5>
-          <p class="grey-text">Electrical Engineering & Application Development</p>
+        <div class="col s12">
+          <ul class="tabs">
+            <li id="work" class="tab col s4"><a href="#work_exp">Work Experience</a></li>
+            <li class="tab col s4"><a href="#education">Education</a></li>
+            <li id="skills" class="tab col s4"><a href="#skills_tab">Skills</a></li>
+          </ul>
         </div>
-        <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Contact Infomation</h5>
-          <ul>
-            <li class="grey-text text-lighten-3">Email: geraladt@outlook.com</li>
-            <li class="grey-text text-lighten-3">Mobile: +233505091004</li>
+        <!-- work -->
+        <div id="work_exp" class="col s12">
+          <ul class="collapsible">
+            <li class="active">
+              <div class="collapsible-header">
+                <img
+                  src="https://ubcipg.db.files.1drv.com/y4mwMN8lCSdZjsea07YUqvXGlTwgcltPiaO80Ou0nbYWVuaAaSP_V4EwGQjUQA0a-XuGPtVtHgEMVsCUBc907HHJStXmhHHIaHTx3NxSN1-8-6h2GZgkI7smOnjdfJbZt5jBCLH3NqN40w61WdIBbOb-aWlvGu8ohxSDMTFulHCMjeWBTIPkZ8VEJYduBFvUmDjs-WOUtRSvX_ADG3Ci6BjoA?width=64&height=64&cropmode=none"
+                  alt="Vodafone" class="responsive-img">
+                <h4>Control Room Supervisor</h4>
+              </div>
+              <div class="collapsible-body">
+                <span>
+                  Managed operations in the control room at the Vodafone Exchange.
+                  Assisted field engineers in connecting customers to telephone lines and
+                  the internet in the control room. Helped to update the records of customers
+                  in Teshie Nungua Estates.
+                </span>
+                <p>Jul 2019 - Aug 2019</p>
+              </div>
+            </li>
             <li>
-              <a href="https://www.linkedin.com/in/gerald-addo-tetteh-a28101182?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BCmZEm4W8S2%2BgVeEJfcgVwg%3D%3D"
-                class="grey-text text-lighten-3">
-                <i class="fab fa-linkedin fa-2x"></i>
-              </a>
+              <div class="collapsible-header">
+                <img
+                  src="https://joqmha.db.files.1drv.com/y4mD93nwUdDXI-iUwhx1s2aLge8213TgugVSiH0Qp6cip58Nh3do3D03P6bLtdh-hjivl8xcQPmkjlnma46mRE2fx2GM3jgl32su8tRZ640rPzPR4XSzi9WlwQFYNJVmdmnCT3R9t3MueJed2En3cvWnr5qdjFmsDDCxF9Cn2J0JELHI8_3H4gi6NhkJvyb-nIJIuNhZqP8RhMlqJw6dld5gQ?width=64&height=64&cropmode=none"
+                  alt="Nyaho Medical Centre" class="responsive-img">
+                <h4>Support Systems Intern</h4>
+              </div>
+              <div class="collapsible-body">
+                <span>
+                  Assisting with the repair and maintenance of equipment at
+                  Nyaho Medical Centre (Job Shadowing).
+                </span>
+                <p>Jun 2019</p>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <img
+                  src="https://57kseg.db.files.1drv.com/y4m562DHvj8uK3RtRWZEFHgqFiWurCZfDkqwhVfEl4Cul5pcJNwQoHmvQCZtp86RUalYPIl0jHBPLBTgIgnwa-_X-jcsICz1eMFyyqeKFzX7VkCSyl6cUoNbrGtXnOhMbWcJgMYHn5LvfTs6pGAfVu_-PS3YqotW0pCxT45rPVkWgAuO7H5c057Yu2WUmGpeE0r15UxGzeS22gdvv9Ct2S1xQ?width=64&height=64&cropmode=none"
+                  alt="Charlotte's Memorial School" class="responsive-img">
+                <h4>Library Assistant</h4>
+              </div>
+              <div class="collapsible-body">
+                <span>
+                  Assisted librarian in managing the library and with book sales at the
+                  beginning of the academic year.
+                </span>
+                <p>May 2018 - Aug 2018</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- Education -->
+        <div id="education" class="col s12">
+          <ul class="collection">
+            <li class="collection-item avatar">
+              <img
+                src="https://9uedba.db.files.1drv.com/y4mTgEA2E7WSnKbano82mo_qidI5-ed33Sc2pa-q8RGZp1uFGkruXtf0zhFjeR5nCMjJc9APDjem1YcvTwOlP0JgRfmfqcjUGRNIcJPd-iguB3H1-3kJLerxZlJwBwUwlGE0Pc-IyaKFHEgLWlyGccMtIfCIHLUKotxEVrLZDx8etDvthDEHPTrqXCpquIhM4QEt-8xWsotzLMVYbkjXSxTLw?width=64&height=64&cropmode=none"
+                alt="Ashesi University" class="circle">
+              <span class="title">Ashesi University</span>
+              <p>Electrical Engineering <br>
+                <span>August 2018 to Present</span>
+              </p>
+            </li>
+            <li class="collection-item avatar">
+              <img
+                src="https://ixxq4q.db.files.1drv.com/y4mZse9s1tSpYeqK9tUa3RmaJxcEhpToxrs3fQzoIkuLg8rFf-Gzim2IfGSCvKmIUiowd_jbtuBZjG3BKCZY_upvEE-NYJibmV3ys3c70H3RwSGbaPGbGRqy7m7QMaPh7M-s2FeO0LY9FozHuyUlv5I34SvfAOlX9T0GSPlk_E36dnJWYKVUtYZE4HIKTQ3AlyXVxFq4d1o91Fy1-tfDuwjXQ?width=64&height=64&cropmode=none"
+                alt="Presbyterian Boys Secondary School" class="circle">
+              <span class="title">Presbyterian Boys Secondary School</span>
+              <p>General Science <br>
+                <span>September 2015 to May 2018</span>
+              </p>
+            </li>
+          </ul>
+        </div>
+        <!-- Skills -->
+        <div id="skills_tab" class="col s12">
+          <ul class="collection">
+            <li class="collection-item avatar">
+              <i class="fas fa-code circle black"></i>
+              <span class="title">Web Development</span>
+              <p>
+                Developing Websites with Node.js (Full Stack).
+                Including this Portfolio.
+              </p>
+            </li>
+            <li class="collection-item avatar">
+              <i class="fas fa-mobile circle blue"></i>
+              <span class="title">Mobile App Development</span>
+              <p>
+                Using Flutter and Java to Develop Mobile Applications.
+              </p>
+            </li>
+            <li class="collection-item avatar">
+              <img
+                src="https://hanhvw.db.files.1drv.com/y4mo1EfrA_BNFzGr_26Y3rOozK4YhoQspknswqURA6dMeyje5deBe5UmGEPX1QiToLjkVAeIO0dRYBaB-TZA1jN-BNjbkhVirkgRAslTnIl2aZ33yZ1YjYfInxgpB7Cn-L3KhuS8bNiwnEYN-uiR-35wbrrUkbW-BGIXGXUeghcM5_qpE_Tque2Pg1yGnAQAYE3ZZgRFCE6bszbXKPSlCLhYA?width=64&height=64&cropmode=none"
+                alt="Arduino" class="circle green">
+              <span class="title">Arduino Programming</span>
+              <p>
+                Building Circuits Using Arduino. <br>
+                These Include a Miniature
+                Weather Station and a Device to Measure Distance
+                From an Object and the Speed of Sound.
+              </p>
+            </li>
+            <li class="collection-item avatar">
+              <i class="fab fa-python circle green"></i>
+              <span class="title">Python Programming</span>
+              <p>
+                Building Programs Using Python. <br>
+                Such as an Encryption Program and some
+                Desktop Applicaions.
+              </p>
             </li>
           </ul>
         </div>
       </div>
     </div>
-    <div class="footer-copyright grey darken-3">
-      <div class="container center-align">
-        <h6>&copy; 2020 G.Addo</h6>
-        <h6>Icons made by <a href="https://www.flaticon.com/authors/pixelmeetup" title="Pixelmeetup">Pixelmeetup</a>
-          from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></h6>
-      </div>
-    </div>
-  </footer>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="/javascript/js/materialize.min.js"></script>
-  <script src="/javascript/index.js"></script>
-</body>
+  </section>
 
-</html>
+</main>
+
+<%- include("./partials/footer") %>

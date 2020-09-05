@@ -8,6 +8,10 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
+app.get("/stereobeats", (req, res) => {
+  res.render("projects/stereo_beats");
+});
+
 app.get("*", (req, res) => {
   res.render("error_page");
 });
