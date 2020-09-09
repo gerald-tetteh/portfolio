@@ -93,6 +93,9 @@ span.part-2 {
 .card {
   height: 220px;
 }
+.google-badge {
+  max-width: 80%;
+}
 @media only screen and (max-width: 1260px) {
   .intro-card-img {
     width: 20%;
