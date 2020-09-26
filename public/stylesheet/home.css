@@ -1,0 +1,118 @@
+/* Global styles */
+* {
+  box-sizing: inherit;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+  font-family: 'Montserrat', 'Times New Roman';
+}
+body {
+  box-sizing: border-box;
+}
+hr {
+  width: 50%;
+}
+
+/* Header */
+header {
+  height: 43.75rem;
+  background: url(https://f7goew.db.files.1drv.com/y4mP2ox4z5T4kqyy30DcxQcG1XAi1MqDfy6Bc_YFkAJ4otBgzaxhs7B9NYQ86UjzjWsybgtEeIvbjZd1U21o44BGwrdDdVGHBFBSM8vVW69cmTqOZ2G2-qHpRS9tKrsoQamaOGjuKUwYUBJDs7Odq6WppZAPqBzqQIN3ID_N_tGqy8Wltp3wOZxz0G6rk2WKi_BDilBaKEmu_BunB-Z8YapWw?width=4032&height=1960&cropmode=none);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+ul.right.hide-on-med-and-down li:nth-of-type(4),
+ul.right.hide-on-med-and-down li:nth-of-type(5) {
+  margin-top: 1.25rem;
+}
+.transparent {
+  transition: background-color 700ms;
+}
+.dark {
+  background: #212121;
+  transition: background 700ms;
+}
+.heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: #f7f7f7;
+  text-align: center;
+}
+.heading-text--main {
+  font-weight: 400;
+  letter-spacing: 5;
+}
+.heading-text--sub {
+  text-align: center;
+  font-weight: 300;
+  font-size: 1.6rem;
+  color: #f7f7f7;
+  padding: 0.5rem;
+  margin-top: 0.3125rem;
+}
+.download-cv {
+  display: inline-block;
+  padding: 0.625rem 1.875rem;
+  background: linear-gradient(90deg, rgba(127,233,127,1) 0%, rgba(55,142,63,1) 100%);
+  border-radius: 0.625rem 0 0.625rem 0;
+  color: #f7f7f7;
+}
+.download-cv:hover {
+  box-shadow: 0.3125rem 0.3125rem 0.625rem rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+.download-cv:active {
+  box-shadow: 0.125rem 0.125rem 0.625rem rgba(0, 0, 0, 0.3);
+}
+.button-text {
+  font-size: 1.25rem;
+}
+
+/* About Section */
+.aboutMe-heading--main {
+  text-align: center;
+  font-family: 'Grenze Gotisch', sans-serif;
+}
+
+/* Media Queries */
+@media screen and (max-width: 750px) {
+  .heading-text--main {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 737px) {
+  .heading-text--sub {
+    font-size: 1.25rem;
+  }
+}
+@media screen and (max-width: 591px) {
+  .heading-text--main {
+    font-size: 1.25rem;
+  }
+  .heading-text--sub {
+    font-size: 0.9375rem;
+  }
+}
+@media screen and (max-width: 380px){
+  .heading-text--sub {
+    font-size: 0.625rem;
+  }
+  a.brand-logo {
+    font-size: 1.2rem;
+  }
+  .button-text {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 280px) {
+  a.brand-logo {
+    font-size: 1.3rem;
+  }
+}
