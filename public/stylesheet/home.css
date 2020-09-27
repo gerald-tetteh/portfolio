@@ -16,6 +16,12 @@ body {
 hr {
   width: 50%;
 }
+.card .card-content {
+  padding: 0.625rem;
+}
+.container-fluid {
+  width: 95%;
+}
 
 /* Header */
 header {
@@ -79,6 +85,41 @@ ul.right.hide-on-med-and-down li:nth-of-type(5) {
 .aboutMe-heading--main {
   text-align: center;
   font-family: 'Grenze Gotisch', sans-serif;
+}
+
+/* Featured Skills */
+.featured-skills {
+  text-align: center;
+}
+.featured-skills .card {
+  border-radius: 1000px;
+}
+.featured-skills-heading {
+  display: inline-block;
+  background: linear-gradient(90deg, rgba(127,233,127,1) 0%, rgba(55,142,63,1) 100%);
+  border-radius: 0.625rem 0 0.625rem 0;
+  color: #f7f7f7;
+  padding: 0.625rem 1.875rem;
+  margin-bottom: 0.625rem;
+}
+.featured-skills-heading--text {
+  font-size: 2rem;
+}
+.featured-img {
+  max-width: 45px;
+  width: 100%;
+}
+.featured-text {
+  margin-left: 0.625rem;
+}
+
+/* Projects */
+.parallax-container {
+  height: 700px;
+}
+.projects-heading {
+  font-family: 'Grenze Gotisch', sans-serif;
+  text-align: center;
 }
 
 /* Media Queries */
