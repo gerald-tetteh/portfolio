@@ -119,6 +119,7 @@ ul.right.hide-on-med-and-down li:nth-of-type(5) {
 }
 .featured-img {
   max-width: 45px;
+  height: 45px;
   width: 100%;
 }
 .featured-text {
@@ -140,6 +141,37 @@ ul.right.hide-on-med-and-down li:nth-of-type(5) {
 }
 .personal-projects {
   text-align: center;
+}
+.news-img-container{
+  background-color: #212121;
+  position: relative;
+  width: 100%;
+  height: 315;
+}
+
+
+.tabs .tab a{
+  color: #212121;
+}
+.tabs .tab a:hover, .tabs .tab a.active{
+  color: #212121;
+}
+.tabs .indicator{
+  background-color: #212121;
+}
+.tabs .tab a:focus, .tabs .tab a:focus.active{
+  background-color: #eeeeee;
+} 
+.collapsible-header {
+  display: flex;
+  justify-content: center;
+}
+.collapsible-header > h4 {
+  font-weight: 300;
+  padding: 0.5rem;
+}
+#projects > div:nth-child(4) div.row{
+  margin-bottom: 50px;
 }
 
 /* Media Queries */
