@@ -8,6 +8,10 @@ app.get("/", (req, res) => {
   res.render("home/home");
 });
 
+app.get("/cv", (req, res) => {
+  res.download("./public/documents/Gerald Addo-Tetteh_CV_mobile.pdf");
+});
+
 app.get("/stereobeats", (req, res) => {
   res.render("projects/stereo_beats");
 });
