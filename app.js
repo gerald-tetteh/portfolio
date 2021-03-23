@@ -1,3 +1,5 @@
+const path = require("path");
+
 const express = require("express");
 const app = express();
 
@@ -10,6 +12,10 @@ app.get("/", (req, res) => {
 
 app.get("/cv", (req, res) => {
   res.download("./public/documents/Gerald Addo-Tetteh_CV_mobile.pdf");
+});
+
+app.get("/app-ads.txt", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "documents", "app-ads.txt"));
 });
 
 app.get("/stereobeats", (req, res) => {
