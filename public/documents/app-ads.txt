@@ -1,0 +1,3 @@
+# QR Scanner & Generator ads.txt
+
+google.com, pub-1415946073132694, DIRECT, f08c47fec0942fa0 # banner, interstitial
