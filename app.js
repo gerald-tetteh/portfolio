@@ -11,7 +11,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/cv", (req, res) => {
-  res.download("./public/documents/Gerald Addo-Tetteh_CV_mobile.pdf");
+  res.download("./public/documents/Gerald_Addo-Tetteh_CVs.zip");
 });
 
 app.get("/app-ads.txt", (req, res) => {
