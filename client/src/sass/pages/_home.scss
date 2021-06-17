@@ -1,0 +1,17 @@
+.home {
+  position: relative;
+  &__header {
+    height: 60.5rem;
+    background-image: $bg-header-desktop;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include respond(big-desktop-sm) {
+      background-size: cover;
+    }
+    @include respond(phone) {
+      background-image: $bg-header-mobile;
+      background-size: cover;
+    }
+  }
+}

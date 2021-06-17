@@ -1,0 +1,11 @@
+.container {
+  width: 80% !important;
+  margin: 0 auto;
+
+  @include respond(phone) {
+    width: 90% !important;
+  }
+}
+.active {
+  color: $color-gold !important;
+}

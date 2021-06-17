@@ -1,0 +1,24 @@
+.btn {
+  &,
+  &:visited,
+  &:link {
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  &--outline {
+    font-size: 1.8rem;
+    color: $color-gold !important;
+    background-color: $color-black;
+    border: 1px solid $color-gold;
+    padding: 1rem 3rem;
+    
+    @include no-hover {
+      color: $color-gold !important;
+    }
+
+    &:hover {
+      color: $color-white !important;
+    }
+  }
+}

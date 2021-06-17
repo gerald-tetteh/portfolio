@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400&family=Viaoda+Libre&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 43.75%; } }
+
+body {
+  font-size: 1.6rem;
+  font-family: "Ubuntu Mono", monospace;
+  font-weight: 400; }
+
+#root {
+  position: relative; }
+
+.container {
+  width: 80% !important;
+  margin: 0 auto; }
+  @media only screen and (max-width: 37.5em) {
+    .container {
+      width: 90% !important; } }
+
+.active {
+  color: #FFCE8A !important; }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.5rem;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0; }
+  .navbar__brand, .navbar__brand:link, .navbar__brand:visited {
+    color: #fff;
+    text-decoration: none;
+    font-family: "Dancing Script", cursive;
+    font-size: 3.6rem; }
+  .navbar__navigation {
+    list-style: none;
+    display: flex;
+    color: #fff;
+    font-size: 1.8rem;
+    align-items: center; }
+    @media only screen and (max-width: 43.75em) {
+      .navbar__navigation {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); } }
+    .navbar__navigation-item {
+      cursor: pointer; }
+      .navbar__navigation-item a, .navbar__navigation-item a:link, .navbar__navigation-item a:visited {
+        text-decoration: none;
+        color: inherit; }
+      .navbar__navigation-item:not(:first-of-type) {
+        margin-left: 2.2rem; }
+      .navbar__navigation-item:hover {
+        color: #FFCE8A; }
+  .navbar__mobile {
+    padding: 10px;
+    background-color: #FFCE8A;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    align-self: center; }
+    .navbar__mobile-icon {
+      margin-top: 9px;
+      position: relative; }
+      .navbar__mobile-icon, .navbar__mobile-icon::after, .navbar__mobile-icon::before {
+        width: 20px;
+        height: 1px;
+        background-color: #1e2233;
+        display: inline-block;
+        transition: all 0.2s; }
+      .navbar__mobile-icon::before, .navbar__mobile-icon::after {
+        content: "";
+        position: absolute;
+        left: 0; }
+      .navbar__mobile-icon::after {
+        top: -7px; }
+      .navbar__mobile-icon::before {
+        bottom: -7px; }
+  .navbar__checkbox:checked + .navbar__mobile .navbar__mobile-icon {
+    background-color: transparent; }
+  .navbar__checkbox:checked + .navbar__mobile .navbar__mobile-icon::before {
+    transform: rotate(45deg);
+    bottom: 0; }
+  .navbar__checkbox:checked + .navbar__mobile .navbar__mobile-icon::after {
+    transform: rotate(-45deg);
+    top: 0; }
+
+.btn, .btn:visited, .btn:link {
+  text-decoration: none;
+  cursor: pointer; }
+
+.btn--outline {
+  font-size: 1.8rem;
+  color: #FFCE8A !important;
+  background-color: #1e2233;
+  border: 1px solid #FFCE8A;
+  padding: 1rem 3rem; }
+  @media (hover: none) {
+    .btn--outline {
+      color: #FFCE8A !important; } }
+  .btn--outline:hover {
+    color: #fff !important; }
+
+.dropdown {
+  position: relative; }
+  .dropdown__menu {
+    margin-top: 0.5rem;
+    position: absolute;
+    left: -2rem;
+    list-style: none;
+    background-color: #FFCE8A;
+    color: #1e2233;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    box-shadow: 0px 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s; }
+    .dropdown__menu-item:not(:last-of-type) {
+      margin-bottom: 1rem; }
+    .dropdown__menu-item:hover {
+      cursor: pointer;
+      color: #fff; }
+  .dropdown:hover .dropdown__menu {
+    visibility: visible;
+    opacity: 1; }
+  @media (hover: none) {
+    .dropdown:target .dropdown__menu {
+      visibility: visible;
+      opacity: 1; } }
+
+.home {
+  position: relative; }
+  .home__header {
+    height: 60.5rem;
+    background-image: url(../images/bg-header-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain; }
+    @media only screen and (min-width: 103.75em) {
+      .home__header {
+        background-size: cover; } }
+    @media only screen and (max-width: 37.5em) {
+      .home__header {
+        background-image: url(../images/bg-header-mobile.svg);
+        background-size: cover; } }
