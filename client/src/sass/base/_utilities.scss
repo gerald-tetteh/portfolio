@@ -9,3 +9,50 @@
 .active {
   color: $color-gold !important;
 }
+.bg-dark {
+  background-color: #1e2233;
+  padding: 1rem;
+  border-radius: 5px;
+  z-index: 1;
+}
+.bg-transparent {
+  background-color: transparent;
+}
+
+.section-heading {
+  color: $color-gold;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+}
+
+.mt-md {
+  margin-top: 4rem;
+}
+.mb-sm {
+  margin-bottom: 2rem;
+}
+.mb-xs {
+  margin-bottom: 1rem;
+}
+
+.color-gold {
+  color: $color-gold;
+}
+.color-purple {
+  color: $color-purple;
+}
+.color-green {
+  color: $color-green;
+}
+.color-blue {
+  color: $color-blue;
+}
+.color-brown {
+  color: $color-brown;
+}
+.color-orange {
+  color: $color-orange;
+}
+.color-green-pale {
+  color: $color-green-pale;
+}

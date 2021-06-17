@@ -1,9 +1,28 @@
 // navbar component
+import { useRef } from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const navbarRef = useRef();
+
+  const handelOnScroll = () => {
+    if (navbarRef.current === undefined) {
+      return;
+    }
+    if (window.pageYOffset > 0) {
+      navbarRef.current.classList.add("bg-dark");
+      navbarRef.current.classList.remove("bg-transparent");
+    }
+    if (window.pageYOffset === 0) {
+      navbarRef.current.classList.remove("bg-dark");
+      navbarRef.current.classList.add("bg-transparent");
+    }
+  };
+
+  window.addEventListener("scroll", handelOnScroll);
+
   return (
-    <nav className="navbar container">
+    <nav ref={navbarRef} className="navbar container">
       <Link to="#" className="navbar__brand">
         Addo Develop
       </Link>

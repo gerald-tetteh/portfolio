@@ -16,8 +16,11 @@
     @media only screen and (min-width: 112.5em) { @content };
   }
   @if $breakpoint == big-desktop-sm {
-    @media only screen and (min-width: 103.75em) { @content };
+    @media only screen and (min-width: 89.975em) { @content };
   }
+}
+@mixin custom-query($breakpoint) {
+  @media only screen and (max-width: #{$breakpoint}) { @content };
 }
 
 // feature media queries

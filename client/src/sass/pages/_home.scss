@@ -1,17 +1,148 @@
 .home {
-  position: relative;
   &__header {
-    height: 60.5rem;
+    position: relative;
+    height: 52.5rem;
     background-image: $bg-header-desktop;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
+    background-position: right;
 
-    @include respond(big-desktop-sm) {
-      background-size: cover;
-    }
     @include respond(phone) {
       background-image: $bg-header-mobile;
-      background-size: cover;
+      height: 80vh;
+    }
+  }
+  &__text-container {
+    position: absolute;
+    left: 11%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 37%;
+    background-color: rgba($color: #000000, $alpha: 0.23);
+    border-radius: $border-radius;
+    padding: 0 2.5rem;
+    padding-top: 6rem;
+    padding-bottom: 1.3rem;
+
+    @include custom-query(66.125em) {
+      top: 43%;
+      width: 43%;
+    }
+    @include custom-query(44.875em) {
+      padding-top: 4rem;
+      top: 37%;
+    }
+    @include respond(big-desktop) {
+      padding-top: 4rem;
+      width: 45%;
+    }
+    @include respond(phone) {
+      top: 50%;
+      width: 80%;
+    }
+  }
+  &__text-pre {
+    color: $color-gold;
+    font-size: 3.6rem;
+    margin-bottom: 0.5rem;
+
+    @include custom-query(82.75em) {
+      font-size: 3rem;
+    }
+    @include custom-query(66.125em) {
+      font-size: 2rem;
+    }
+    @include custom-query(44.875em) {
+      font-size: 1.6rem;
+    }
+  }
+  &__heading {
+    color: $color-white;
+    font-size: 8rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+
+    @include custom-query(82.75em) {
+      font-size: 7rem;
+    }
+    @include custom-query(66.125em) {
+      font-size: 6rem;
+    }
+    @include custom-query(44.875em) {
+      font-size: 5rem;
+    }
+  }
+  &__text-sub {
+    font-size: 2.4rem;
+    font-style: italic;
+    color: $color-grey;
+
+    @include custom-query(82.75em) {
+      font-size: 2rem;
+    }
+    @include custom-query(66.125em) {
+      font-size: 1.5rem;
+    }
+  }
+  &__icons {
+    margin-top: 0.9rem;
+  }
+  &__icon {
+    display: inline-block;
+    width: auto;
+    height: 30px;
+
+    &:not(:last-of-type) {
+      margin-right: 2rem;
+    }
+    & img {
+      width: auto;
+      height: 100%;
+    }
+  }
+
+  &__about-me {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(40rem,1fr));
+    background-color: $color-light-blue;
+  }
+}
+
+.about-me {
+  &__col-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__col-2 {
+    width: 70%;
+
+    @include custom-query(34.9375em) {
+      width: 100%;
+      padding: 2rem;
+
+      & p {
+        margin-top: 0;
+      }
+    }
+  }
+  &__image {
+    height: 60%;
+    max-width: 80%;
+    width: auto;
+  }
+  &__heading {
+    font-size: 6.4rem;
+    font-family: $font-viaoda-libre;
+    color: $color-white;
+  }
+  &__text {
+    color: $color-white;
+    font-size: 2.4rem;
+    padding: 1rem 0;
+
+    &:last-of-type {
+      margin-bottom: 15rem;
     }
   }
 }

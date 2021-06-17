@@ -5,7 +5,8 @@
   position: fixed;
   left: 0;
   right: 0;
-  top: 0;
+  top: 5px;
+  transition: $transition-small;
 
   &__brand {
     &,
@@ -56,6 +57,11 @@
     width: 40px;
     height: 40px;
     align-self: center;
+    display: none;
+
+    @include respond(tab-land-sm) {
+      display: block;
+    }
 
     &-icon {
       margin-top: 9px;
@@ -66,8 +72,12 @@
         width: 20px;
         height: 1px;
         background-color: $color-black;
-        display: inline-block;
         transition: $transition-small;
+        display: none;
+
+        @include respond(tab-land-sm) {
+          display: inline-block;
+        }
       }
       &::before, &::after {
         content: "";
