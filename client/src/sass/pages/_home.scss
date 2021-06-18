@@ -106,6 +106,21 @@
     grid-template-columns: repeat(auto-fit,minmax(40rem,1fr));
     background-color: $color-light-blue;
   }
+  &__skills {
+    background-color: $color-black;
+    padding: 4rem 0;
+
+    &__container {
+      padding: 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(34rem,1fr));
+      gap: 2.5rem;
+      justify-items: center;
+    }
+  }
+  &__projects {
+    padding: 4rem 0;
+  }
 }
 
 .about-me {
@@ -143,6 +158,42 @@
 
     &:last-of-type {
       margin-bottom: 15rem;
+    }
+  }
+}
+
+.projects {
+  &__header-main {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__nav {
+    display: flex;
+
+    &--right,&--left {
+      padding: 0.2rem 0.5rem;
+    }
+    &--right {
+      background-color: $color-light-blue;
+      border-radius: $border-radius-sm 0 0 $border-radius-sm;
+      color: $color-gold;
+    }
+    &--left {
+      background-color: $color-gold;
+      border-radius: 0 $border-radius-sm $border-radius-sm 0;
+      color: $color-black;
+    }
+  }
+  &__list {
+    display: flex;
+    overflow: auto;
+    margin-right: 0;
+    margin-left: 5%;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
     }
   }
 }

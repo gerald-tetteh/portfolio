@@ -7,7 +7,8 @@
   padding: 0; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  scroll-behavior: smooth; }
   @media only screen and (max-width: 75em) {
     html {
       font-size: 56.25%; } }
@@ -25,6 +26,16 @@ body {
 
 #root {
   position: relative; }
+
+.section-heading {
+  color: #FFCE8A;
+  font-size: 2.4rem;
+  text-transform: uppercase; }
+
+.section-heading-secondary {
+  font-family: "Dancing Script", cursive;
+  font-size: 7.2rem;
+  text-transform: capitalize; }
 
 .container {
   width: 80% !important;
@@ -45,19 +56,26 @@ body {
 .bg-transparent {
   background-color: transparent; }
 
-.section-heading {
-  color: #FFCE8A;
-  font-size: 2.4rem;
-  text-transform: uppercase; }
-
 .mt-md {
   margin-top: 4rem; }
 
 .mb-sm {
   margin-bottom: 2rem; }
 
+.mr-md {
+  margin-right: 4rem; }
+
+.mb-md {
+  margin-bottom: 4rem; }
+
 .mb-xs {
   margin-bottom: 1rem; }
+
+.p-xs {
+  padding: 0.7rem; }
+
+.pl-sm {
+  padding-left: 2rem; }
 
 .color-gold {
   color: #FFCE8A; }
@@ -72,7 +90,7 @@ body {
   color: #00B5F8; }
 
 .color-brown {
-  color: #7B685F; }
+  color: #7b685f; }
 
 .color-orange {
   color: #E28743; }
@@ -159,7 +177,8 @@ body {
 
 .btn, .btn:visited, .btn:link {
   text-decoration: none;
-  cursor: pointer; }
+  cursor: pointer;
+  display: inline-block; }
 
 .btn--outline {
   font-size: 1.8rem;
@@ -200,6 +219,54 @@ body {
     .dropdown:target .dropdown__menu {
       visibility: visible;
       opacity: 1; } }
+
+.skills-tile {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: repeat(2, min-content);
+  column-gap: 2rem;
+  background-color: #7b685f;
+  border-radius: 5px;
+  padding: 1rem;
+  padding-bottom: 2rem; }
+  .skills-tile__icon {
+    width: auto;
+    height: 4.5rem; }
+  .skills-tile__heading {
+    align-self: center;
+    color: #fff;
+    font-family: "Viaoda Libre", cursive;
+    font-size: 2rem; }
+  .skills-tile__content {
+    grid-column: 2 / 3; }
+
+.project-card {
+  min-width: 36.6rem;
+  max-width: 36.6rem;
+  width: 100%;
+  background-color: #303551;
+  border-radius: 5px;
+  overflow: hidden; }
+  .project-card__image {
+    height: 26.9rem;
+    width: auto; }
+    .project-card__image img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center; }
+  .project-card__text {
+    padding: 1.5rem 1rem; }
+  .project-card__heading {
+    font-family: "Viaoda Libre", cursive;
+    font-size: 3rem;
+    color: #FFCE8A;
+    font-weight: 400;
+    margin-bottom: 1.5rem; }
+  .project-card__content {
+    font-size: 2.4rem;
+    color: #fff;
+    margin-bottom: 4rem; }
 
 .home__header {
   position: relative;
@@ -299,6 +366,19 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
   background-color: #303551; }
 
+.home__skills {
+  background-color: #1e2233;
+  padding: 4rem 0; }
+  .home__skills__container {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(34rem, 1fr));
+    gap: 2.5rem;
+    justify-items: center; }
+
+.home__projects {
+  padding: 4rem 0; }
+
 .about-me__col-1 {
   display: flex;
   justify-content: center;
@@ -329,3 +409,30 @@ body {
   padding: 1rem 0; }
   .about-me__text:last-of-type {
     margin-bottom: 15rem; }
+
+.projects__header-main {
+  display: flex;
+  justify-content: space-between; }
+
+.projects__nav {
+  display: flex; }
+  .projects__nav--right, .projects__nav--left {
+    padding: 0.2rem 0.5rem; }
+  .projects__nav--right {
+    background-color: #303551;
+    border-radius: 3px 0 0 3px;
+    color: #FFCE8A; }
+  .projects__nav--left {
+    background-color: #FFCE8A;
+    border-radius: 0 3px 3px 0;
+    color: #1e2233; }
+
+.projects__list {
+  display: flex;
+  overflow: auto;
+  margin-right: 0;
+  margin-left: 5%;
+  scrollbar-width: none;
+  -ms-overflow-style: none; }
+  .projects__list::-webkit-scrollbar {
+    display: none; }

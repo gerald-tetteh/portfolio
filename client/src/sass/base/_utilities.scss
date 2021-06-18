@@ -12,17 +12,11 @@
 .bg-dark {
   background-color: #1e2233;
   padding: 1rem;
-  border-radius: 5px;
+  border-radius: $border-radius;
   z-index: 1;
 }
 .bg-transparent {
   background-color: transparent;
-}
-
-.section-heading {
-  color: $color-gold;
-  font-size: 2.4rem;
-  text-transform: uppercase;
 }
 
 .mt-md {
@@ -31,8 +25,20 @@
 .mb-sm {
   margin-bottom: 2rem;
 }
+.mr-md {
+  margin-right: 4rem;
+}
+.mb-md {
+  margin-bottom: 4rem;
+}
 .mb-xs {
   margin-bottom: 1rem;
+}
+.p-xs {
+  padding: 0.7rem;
+}
+.pl-sm {
+  padding-left: 2rem;
 }
 
 .color-gold {

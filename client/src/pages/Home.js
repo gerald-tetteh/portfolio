@@ -1,9 +1,12 @@
 // Home page
 import Navbar from "../components/global/Navbar";
+import SkillsTile from "../components/home/SkillsTile";
+import ProjectCard from "../components/home/ProjectCard";
 import instagramImage from "../images/instagram.svg";
 import githubImage from "../images/github.svg";
 import linkedInImage from "../images/linkedin.svg";
 import aboutMeImage from "../images/who-am-i.svg";
+import { skills, projectsPersonal } from "../utilities/home_list_items";
 
 const Home = () => {
   window.addEventListener("click", (_) => {
@@ -25,13 +28,28 @@ const Home = () => {
             Web Developer & Flutter Developer & Electrical Engineering Student
           </p>
           <div className="home__icons">
-            <a href="#" target="_blank" className="home__icon home__icon--1">
+            <a
+              href="https://www.instagram.com/addo.t_"
+              rel="noreferrer"
+              target="_blank"
+              className="home__icon home__icon--1"
+            >
               <img src={instagramImage} alt="Instagram Icon" />
             </a>
-            <a href="#" target="_blank" className="home__icon home__icon--2">
+            <a
+              href="https://github.com/gerald-tetteh"
+              rel="noreferrer"
+              target="_blank"
+              className="home__icon home__icon--2"
+            >
               <img src={githubImage} alt="Github Icon" />
             </a>
-            <a href="#" target="_blank" className="home__icon home__icon--3">
+            <a
+              href="https://www.linkedin.com/in/gerald-addo-tetteh-a28101182/"
+              rel="noreferrer"
+              target="_blank"
+              className="home__icon home__icon--3"
+            >
               <img src={linkedInImage} alt="LinkedIn Icon" />
             </a>
           </div>
@@ -68,6 +86,44 @@ const Home = () => {
               <span className="color-green-pale">android applications</span>.
               Some of my work is below.
             </p>
+          </div>
+        </section>
+        <section id="skills" className="home__skills">
+          <div className="container">
+            <p className="section-heading mb-md">what i do</p>
+            <div className="home__skills__container">
+              {skills.map((skill, index) => {
+                return (
+                  <SkillsTile
+                    key={index}
+                    icon={skill.icon}
+                    content={skill.content}
+                    heading={skill.heading}
+                    alt={skill.alt}
+                  />
+                );
+              })}
+            </div>
+          </div>
+        </section>
+        <section
+          id="projects-personal"
+          className="home__projects home__projects--personal"
+        >
+          <div className="container">
+            <div className="projects__header-main">
+              <p className="section-heading">projects</p>
+              <div className="projects__nav">
+                <div className="projects__nav--right">&#10229;</div>
+                <div className="projects__nav--left">&#10230;</div>
+              </div>
+            </div>
+            <p className="section-heading-secondary p-xs pl-sm">personal</p>
+          </div>
+          <div className="projects__list mt-md">
+            {projectsPersonal.map((project, index) => {
+              return <ProjectCard key={index} project={project} />;
+            })}
           </div>
         </section>
       </main>
