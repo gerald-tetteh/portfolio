@@ -1,12 +1,16 @@
 // Home page
 import Navbar from "../components/global/Navbar";
+import ProjectsSection from "../components/home/ProjectsSection";
 import SkillsTile from "../components/home/SkillsTile";
-import ProjectCard from "../components/home/ProjectCard";
 import instagramImage from "../images/instagram.svg";
 import githubImage from "../images/github.svg";
 import linkedInImage from "../images/linkedin.svg";
 import aboutMeImage from "../images/who-am-i.svg";
-import { skills, projectsPersonal } from "../utilities/home_list_items";
+import {
+  skills,
+  projectsPersonal,
+  schoolProjects,
+} from "../utilities/home_list_items";
 
 const Home = () => {
   window.addEventListener("click", (_) => {
@@ -110,21 +114,16 @@ const Home = () => {
           id="projects-personal"
           className="home__projects home__projects--personal"
         >
-          <div className="container">
-            <div className="projects__header-main">
-              <p className="section-heading">projects</p>
-              <div className="projects__nav">
-                <div className="projects__nav--right">&#10229;</div>
-                <div className="projects__nav--left">&#10230;</div>
-              </div>
-            </div>
-            <p className="section-heading-secondary p-xs pl-sm">personal</p>
-          </div>
-          <div className="projects__list mt-md">
-            {projectsPersonal.map((project, index) => {
-              return <ProjectCard key={index} project={project} />;
-            })}
-          </div>
+          <ProjectsSection
+            projectsList={projectsPersonal}
+            sectionName="personal"
+          />
+        </section>
+        <section
+          id="projects-school"
+          className="home__projects home__projects--school"
+        >
+          <ProjectsSection projectsList={schoolProjects} sectionName="school" />
         </section>
       </main>
     </div>

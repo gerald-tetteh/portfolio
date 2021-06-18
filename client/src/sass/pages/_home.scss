@@ -121,11 +121,17 @@
   &__projects {
     padding: 4rem 0;
 
+    &--personal, &--school {
+      background-position: center;
+      background-size: cover;
+    }
+    &--school {
+      background-image: linear-gradient(180deg, rgba($color-black-2,.83),rgba($color-black-2,.83)),
+      url(../images/station.jpg);
+    }
     &--personal {
       background-image: linear-gradient(180deg, rgba($color-black-2,.83),rgba($color-black-2,.83)),
       url(../images/project-personal.jpg);
-      background-position: center;
-      background-size: cover;
     }
   }
 }
@@ -179,6 +185,7 @@
 
     &--right,&--left {
       padding: 0.2rem 0.5rem;
+      cursor: pointer;
     }
     &--right {
       background-color: $color-light-blue;
@@ -199,6 +206,7 @@
     scrollbar-width: none;
     -ms-overflow-style: none;
     padding: 0.5rem 0;
+    scroll-behavior: smooth;
 
     &::-webkit-scrollbar {
       display: none;

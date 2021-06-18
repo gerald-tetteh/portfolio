@@ -6,6 +6,8 @@
   border-radius: $border-radius;
   overflow: hidden;
   box-shadow: $box-shadow;
+  height: 56rem;
+  position: relative;
 
   &__image {
     height: 26.9rem;
@@ -32,5 +34,10 @@
     font-size: 2.4rem;
     color: $color-white;
     margin-bottom: 4rem;
+  }
+  &__button {
+    position: absolute;
+    left: 1rem;
+    bottom: 1.5rem;
   }
 }

@@ -6,6 +6,9 @@ import wasteIcon from "../images/waste.png";
 import stereobeatsIcon from "../images/stereobeats.png";
 import exclusiveIcon from "../images/exclusive.png";
 import chefIcon from "../images/chef.png";
+import weatherStationIcon from "../images/station.jpg";
+import boatIcon from "../images/boat_image.png";
+import alarmIcon from "../images/fire_alarm.jpg";
 
 export const skills = [
   {
@@ -70,5 +73,36 @@ export const projectsPersonal = [
     heading: "Personal Chef",
     content:
       "This application allows users to search for the recipes for their favourite foods. The application uses the Spoonacular API.",
+  },
+];
+export const schoolProjects = [
+  {
+    alt: "Weather Station",
+    link: "#weather-station-detail",
+    icon: weatherStationIcon,
+    heading: "Weather Station",
+    content:
+      "Developed a portable weather station using environmentally friendly materials.",
+    contentDetail:
+      "Developed a portable weather station using environmentally friendly materials. The electrical components were developed using an Arduino Uno, a temperature sensor, an infrared sensor and an LCD. The LCD was used to display the temperature and wind speed. I built the electronic components and wrote the Arduino needed to operate the weather station.",
+  },
+  {
+    alt: "Speed Boat",
+    link: "#speed-boat-detail",
+    icon: boatIcon,
+    heading: "Speed Boat",
+    content: "Build a speed boat that could support 2kg of extra weight.",
+    contentDetail:
+      "Build a speed boat that could support 2kg of extra weight. The project applied principles of physics which we had studied that semester. We also practised soldering and using some machines at the school workshop.",
+  },
+  {
+    alt: "Fire Alarm System",
+    link: "#fire-alarm-detail",
+    icon: alarmIcon,
+    heading: "Fire Alarm System",
+    content:
+      "Developed a miniature fire alarm system which was entirely electronic. Current and voltage calculations were applied.",
+    contentDetail:
+      "Developed a miniature fire alarm system which was entirely electronic. Current and voltage calculations were applied. The system used coloured LED's to represent the temperature variations in the room. A thermistor was used to determine the temperature in the room and in the process, the amount of current that should flow through it. Operational amplifers were used to turn on the LED's when the voltage at non-inverting input is higher than the voltage at the inverting input of the operational amplifier. When the temperature in the room is high enough, a buzzer will go off to signify danger. ",
   },
 ];
