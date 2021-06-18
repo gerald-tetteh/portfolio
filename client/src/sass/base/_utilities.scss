@@ -13,10 +13,13 @@
   background-color: #1e2233;
   padding: 1rem;
   border-radius: $border-radius;
-  z-index: 1;
+  z-index: 10000;
 }
 .bg-transparent {
   background-color: transparent;
+}
+.hide-content {
+  transform: translateY(60rem);
 }
 
 .mt-md {

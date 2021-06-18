@@ -125,6 +125,7 @@ const Home = () => {
         >
           <ProjectsSection projectsList={schoolProjects} sectionName="school" />
         </section>
+        <section className="home__work" id="work-exp"></section>
       </main>
     </div>
   );

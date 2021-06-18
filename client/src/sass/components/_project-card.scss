@@ -1,13 +1,37 @@
 .project-card {
+  overflow: hidden;
+  box-shadow: $box-shadow;
+  height: 56rem;
+  position: relative;
   min-width: 36.6rem;
   max-width: 36.6rem;
   width: 100%;
   background-color: $color-light-blue;
   border-radius: $border-radius;
-  overflow: hidden;
-  box-shadow: $box-shadow;
-  height: 56rem;
-  position: relative;
+
+  &__content-detail {
+    background-color: $color-light-blue;
+    border-radius: $border-radius;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    overflow: scroll;
+    padding: 1.5rem 2rem;
+    transition: all 0.8s;
+    backface-visibility: hidden;
+
+    &__close {
+      position: absolute;
+      color: $color-white;
+      font-size: 5rem;
+      right: 1rem;
+      top: 0rem;
+      cursor: pointer;
+    }
+  }
 
   &__image {
     height: 26.9rem;

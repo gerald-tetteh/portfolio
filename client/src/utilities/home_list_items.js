@@ -9,6 +9,10 @@ import chefIcon from "../images/chef.png";
 import weatherStationIcon from "../images/station.jpg";
 import boatIcon from "../images/boat_image.png";
 import alarmIcon from "../images/fire_alarm.jpg";
+import tunrtableIcon from "../images/turntable_icon.jpg";
+import vodafoneIcon from "../images/vodafone.svg";
+import nyahoIcon from "../images/nyaho.png";
+import charlotteIcon from "../images/charlotte.svg";
 
 export const skills = [
   {
@@ -104,5 +108,42 @@ export const schoolProjects = [
       "Developed a miniature fire alarm system which was entirely electronic. Current and voltage calculations were applied.",
     contentDetail:
       "Developed a miniature fire alarm system which was entirely electronic. Current and voltage calculations were applied. The system used coloured LED's to represent the temperature variations in the room. A thermistor was used to determine the temperature in the room and in the process, the amount of current that should flow through it. Operational amplifers were used to turn on the LED's when the voltage at non-inverting input is higher than the voltage at the inverting input of the operational amplifier. When the temperature in the room is high enough, a buzzer will go off to signify danger. ",
+  },
+];
+export const workExperience = [
+  {
+    alt: "Turntable",
+    heading: "Software Engineering Intern",
+    icon: tunrtableIcon,
+    content:
+      "Out of alomost a 100 applicants I was one of the few selected to work as a software engineering intern at Turntabl. At turntabl I learned and applied concents such as Agile developmnet, programming with python and Internet of things.",
+  },
+  {
+    alt: "QKB Green Energy Company",
+    heading: "Mobile Application Developer",
+    icon: wasteIcon,
+    content:
+      "Developed a waste management application for QKB Green Energy Company. The application allows users to request for their plastic waste to be picked up from their homes. The application is available on the Google PlayStore.",
+  },
+  {
+    alt: "Vodafone",
+    heading: "Control Room Supervisor",
+    icon: vodafoneIcon,
+    content:
+      "Managed operations in the control room at the Vodafone Exchange. Assisted field engineers in connecting customers to telephone lines and the internet in the control room. Helped to update the records of customers in Teshie Nungua Estates.",
+  },
+  {
+    alt: "Nyaho Medical Centre",
+    heading: "Support Systems Intern",
+    icon: nyahoIcon,
+    content:
+      "Assisting with the repair and maintenance of equipment at Nyaho Medical Centre (Job Shadowing).",
+  },
+  {
+    alt: "Charllote's Memorial School",
+    heading: "School Website Developer",
+    icon: charlotteIcon,
+    content:
+      "Developed both front-end and back-end components of a website for a private school; Charlotte’s Memorial School. The website allows the school management to display announcements and the school calender.",
   },
 ];
