@@ -1,0 +1,24 @@
+.skills-tile {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: repeat(2,min-content);
+  column-gap: 2rem;
+  background-color: $color-brown;
+  border-radius: $border-radius;
+  padding: 1rem;
+  padding-bottom: 2rem;
+
+  &__icon {
+    width: auto;
+    height: 4.5rem;
+  }
+  &__heading {
+    align-self: center;
+    color: $color-white;
+    font-family: $font-viaoda-libre;
+    font-size: 2rem;
+  }
+  &__content {
+    grid-column: 2 / 3;
+  }
+}

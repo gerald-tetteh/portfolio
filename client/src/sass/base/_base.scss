@@ -1,0 +1,33 @@
+// base sass styles
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400&family=Viaoda+Libre&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+
+  @include respond(tab-land) {
+    font-size: 56.25%;
+  }
+  @include respond(tab-port) {
+    font-size: 43.75%;
+  }
+  @include respond(big-desktop) {
+    font-size: 93.75%;
+  }
+}
+body {
+  font-size: $default-font-size;
+  font-family: $font-ubuntu-mono;
+  font-weight: 400;
+}
+#root {
+  position: relative;
+}

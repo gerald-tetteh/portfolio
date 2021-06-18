@@ -1,0 +1,108 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.5rem;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 5px;
+  transition: $transition-small;
+
+  &__brand {
+    &,
+    &:link,
+    &:visited {
+      color: $color-white;
+      text-decoration: none;
+      font-family: $font-dancing-script;
+      font-size: 3.6rem;
+    }
+  }
+  &__navigation {
+    list-style: none;
+    display: flex;
+    color: $color-white;
+    font-size: 1.8rem;
+    align-items: center;
+
+    @include respond(tab-land-sm) {
+      display: none;
+      flex-direction: column;
+      @include absolute-center;
+    }
+
+    &-item {
+      cursor: pointer;
+      & a{
+        &,
+        &:link,
+        &:visited {
+          text-decoration: none;
+          color: inherit;
+        }
+      }
+
+      &:not(:first-of-type) {
+        margin-left: 2.2rem;
+      }
+      &:hover {
+        color: $color-gold;
+      }
+    }
+  }
+  &__mobile {
+    padding: 10px;
+    background-color: $color-gold;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    align-self: center;
+    display: none;
+
+    @include respond(tab-land-sm) {
+      display: block;
+    }
+
+    &-icon {
+      margin-top: 9px;
+      position: relative;
+      &,
+      &::after,
+      &::before {
+        width: 20px;
+        height: 1px;
+        background-color: $color-black;
+        transition: $transition-small;
+        display: none;
+
+        @include respond(tab-land-sm) {
+          display: inline-block;
+        }
+      }
+      &::before, &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+      }
+      &::after {
+        top: -7px;
+      }
+      &::before {
+        bottom: -7px;
+      }
+    }
+
+  }
+
+  &__checkbox:checked + &__mobile &__mobile-icon {
+    background-color: transparent;
+  }
+  &__checkbox:checked + &__mobile &__mobile-icon::before {
+    transform: rotate(45deg);
+    bottom: 0;
+  }
+  &__checkbox:checked + &__mobile &__mobile-icon::after {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+}

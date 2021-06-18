@@ -1,0 +1,20 @@
+{
+  "short_name": "Portfolio Client",
+  "name": "Personal portfolio client",
+  "icons": [
+    {
+      "src": "profile_picture.jpg",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "profile_picture_large.jpeg",
+      "type": "image/png",
+      "sizes": "458x458"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#1E2233",
+  "background_color": "#303551"
+}

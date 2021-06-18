@@ -1,0 +1,38 @@
+.dropdown {
+  position: relative;
+
+  &__menu {
+    margin-top: 0.5rem;
+    position: absolute;
+    left: -2rem;
+    list-style: none;
+    background-color: $color-gold;
+    color: $color-black;
+    border-radius: $border-radius;
+    padding: 1rem 2rem;
+    box-shadow: $small-box-shadow;
+    visibility: hidden;
+    opacity: 0;
+    transition: $transition-small;
+
+    &-item {
+      &:not(:last-of-type) {
+        margin-bottom: 1rem;
+      }
+      &:hover {
+        cursor: pointer;
+        color: $color-white;
+      }
+    }
+  }
+  &:hover &__menu {
+    visibility: visible;
+    opacity: 1;
+  }
+  @include no-hover {
+    &:target &__menu {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,67 @@
+.container {
+  width: 80% !important;
+  margin: 0 auto;
+
+  @include respond(phone) {
+    width: 90% !important;
+  }
+}
+.active {
+  color: $color-gold !important;
+}
+.bg-dark {
+  background-color: #1e2233;
+  padding: 1rem;
+  border-radius: $border-radius;
+  z-index: 10000;
+}
+.bg-transparent {
+  background-color: transparent;
+}
+.hide-content {
+  transform: translateY(60rem);
+}
+
+.mt-md {
+  margin-top: 4rem;
+}
+.mb-sm {
+  margin-bottom: 2rem;
+}
+.mr-md {
+  margin-right: 4rem;
+}
+.mb-md {
+  margin-bottom: 4rem;
+}
+.mb-xs {
+  margin-bottom: 1rem;
+}
+.p-xs {
+  padding: 0.7rem;
+}
+.pl-sm {
+  padding-left: 2rem;
+}
+
+.color-gold {
+  color: $color-gold;
+}
+.color-purple {
+  color: $color-purple;
+}
+.color-green {
+  color: $color-green;
+}
+.color-blue {
+  color: $color-blue;
+}
+.color-brown {
+  color: $color-brown;
+}
+.color-orange {
+  color: $color-orange;
+}
+.color-green-pale {
+  color: $color-green-pale;
+}
