@@ -299,6 +299,37 @@ body {
     left: 1rem;
     bottom: 1.5rem; }
 
+.work-tile {
+  display: flex;
+  background-color: #1e2233;
+  padding: 3rem 3rem;
+  border-radius: 5px;
+  border: 2px solid #FFCE8A;
+  align-items: flex-start;
+  margin-bottom: 4rem; }
+  @media only screen and (max-width: 37.5em) {
+    .work-tile {
+      flex-direction: column; } }
+  .work-tile__image {
+    max-width: 15rem;
+    width: 100%;
+    align-self: center;
+    margin-right: 1rem;
+    padding: 1rem; }
+    .work-tile__image img {
+      width: 100%; }
+  .work-tile__heading {
+    color: #FFCE8A;
+    font-size: 3.6rem;
+    font-family: "Viaoda Libre", cursive;
+    margin-bottom: 1rem; }
+    @media only screen and (max-width: 37.5em) {
+      .work-tile__heading {
+        text-align: center; } }
+  .work-tile__content {
+    font-size: 2.4rem;
+    color: #fff; }
+
 .home__header {
   position: relative;
   height: 52.5rem;
@@ -416,6 +447,10 @@ body {
     background-image: linear-gradient(180deg, rgba(31, 35, 52, 0.83), rgba(31, 35, 52, 0.83)), url(../images/station.jpg); }
   .home__projects--personal {
     background-image: linear-gradient(180deg, rgba(31, 35, 52, 0.83), rgba(31, 35, 52, 0.83)), url(../images/project-personal.jpg); }
+
+.home__work {
+  padding: 4rem 0;
+  background-color: #303551; }
 
 .about-me__col-1 {
   display: flex;

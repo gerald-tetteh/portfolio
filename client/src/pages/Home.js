@@ -2,6 +2,7 @@
 import Navbar from "../components/global/Navbar";
 import ProjectsSection from "../components/home/ProjectsSection";
 import SkillsTile from "../components/home/SkillsTile";
+import WorkTile from "../components/home/WorkTile";
 import instagramImage from "../images/instagram.svg";
 import githubImage from "../images/github.svg";
 import linkedInImage from "../images/linkedin.svg";
@@ -10,6 +11,7 @@ import {
   skills,
   projectsPersonal,
   schoolProjects,
+  workExperience,
 } from "../utilities/home_list_items";
 
 const Home = () => {
@@ -125,7 +127,14 @@ const Home = () => {
         >
           <ProjectsSection projectsList={schoolProjects} sectionName="school" />
         </section>
-        <section className="home__work" id="work-exp"></section>
+        <section className="home__work" id="work-exp">
+          <div className="container">
+            <p className="section-heading mb-md">work experience</p>
+            {workExperience.map((work, index) => {
+              return <WorkTile key={index} work={work} />;
+            })}
+          </div>
+        </section>
       </main>
     </div>
   );
