@@ -34,13 +34,23 @@ const ProjectCard = ({ project }) => {
             Read More &rarr;
           </div>
         )}
-        {!project.link.includes("#") && (
+        {!project.link.includes("#") && project.link.startsWith("/") && (
           <Link
             to={project.link}
             className="btn btn--outline project-card__button"
           >
             Read More &rarr;
           </Link>
+        )}
+        {project.link.startsWith("http") && (
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noreferrer"
+            className="btn btn--outline project-card__button"
+          >
+            Read More &rarr;
+          </a>
         )}
       </div>
       {project.contentDetail && (

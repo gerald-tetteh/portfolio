@@ -13,6 +13,8 @@ import tunrtableIcon from "../images/turntable_icon.jpg";
 import vodafoneIcon from "../images/vodafone.svg";
 import nyahoIcon from "../images/nyaho.png";
 import charlotteIcon from "../images/charlotte.svg";
+import todoIcon from "../images/todo.png";
+import maniacIcon from "../images/InfoManiac.png";
 
 export const skills = [
   {
@@ -40,15 +42,39 @@ export const skills = [
 export const projectsPersonal = [
   {
     alt: "QR Code Scanner Icon",
-    link: "#",
+    link: "https://play.google.com/store/apps/details?id=com.addodevelop.qr_scanner",
     icon: qrIcon,
     heading: "QR Code Scanner",
     content:
-      "This application was built using Flutter. It is available on mobile phones running Android and IOS. The application allows users",
+      "This application was built using Flutter. It is available on mobile phones running Android and IOS. The application allows users...",
+  },
+  {
+    alt: "Info Maniac Icon",
+    link: "https://info-maniac.herokuapp.com",
+    icon: maniacIcon,
+    heading: "Info Maniac",
+    content:
+      "Info maniac uses web scraping (python) to find job listing on different sites and host the in one location. User would be able...",
+  },
+  {
+    alt: "Todo App with Reat",
+    link: "https://gerald-tetteh.github.io/todo-app-react",
+    icon: todoIcon,
+    heading: "Todo App with React",
+    content:
+      "The todo app was built using react a sass. Users can create, delete and cross of todos. Different themes are also available.",
+  },
+  {
+    alt: "Personal Chef Icon",
+    link: "https://github.com/gerald-tetteh/Personal-Chef",
+    icon: chefIcon,
+    heading: "Personal Chef",
+    content:
+      "This application allows users to search for the recipes for their favourite foods. The application uses the Spoonacular API.",
   },
   {
     alt: "Plastics to Fuel App Icon",
-    link: "#",
+    link: "https://play.google.com/store/apps/details?id=com.addodevelop.waste_management_app",
     icon: wasteIcon,
     heading: "Waste Management App",
     content:
@@ -56,7 +82,7 @@ export const projectsPersonal = [
   },
   {
     alt: "Stereobeats Icon",
-    link: "#",
+    link: "https://play.google.com/store/apps/details?id=com.herokuapp.addodevelop.stereo_beats_main",
     icon: stereobeatsIcon,
     heading: "Stereobeats Music Player",
     content:
@@ -64,19 +90,11 @@ export const projectsPersonal = [
   },
   {
     alt: "Exlusive News App Icon",
-    link: "#",
+    link: "https://play.google.com/store/apps/details?id=com.addodevelop.exclusive",
     icon: exclusiveIcon,
     heading: "Exclusive News App",
     content:
       "Developed a news app using flutter for mobile phone. The application retrieves data from a server in JSON format.",
-  },
-  {
-    alt: "Personal Chef Icon",
-    link: "#",
-    icon: chefIcon,
-    heading: "Personal Chef",
-    content:
-      "This application allows users to search for the recipes for their favourite foods. The application uses the Spoonacular API.",
   },
 ];
 export const schoolProjects = [
