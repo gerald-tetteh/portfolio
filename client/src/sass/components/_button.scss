@@ -22,4 +22,24 @@
       color: $color-white !important;
     }
   }
+  &--fill {
+    border: none;
+    padding: 1.5rem 10rem;
+    color: $color-black;
+    background-color: $color-gold;
+    font-size: 2rem;
+    text-transform: uppercase;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    transition: $transition-small;
+
+    &:hover {
+      color: $color-white;
+      transform: translateY(-1rem);
+    }
+    &:active {
+      transform: translateY(0);
+      box-shadow: $box-shadow-sm;
+    }
+  }
 }

@@ -2,6 +2,8 @@
 import Navbar from "../components/global/Navbar";
 import ProjectsSection from "../components/home/ProjectsSection";
 import SkillsTile from "../components/home/SkillsTile";
+import WorkTile from "../components/home/WorkTile";
+import EducationTile from "../components/home/EducationTile";
 import instagramImage from "../images/instagram.svg";
 import githubImage from "../images/github.svg";
 import linkedInImage from "../images/linkedin.svg";
@@ -10,9 +12,18 @@ import {
   skills,
   projectsPersonal,
   schoolProjects,
+  workExperience,
+  education,
 } from "../utilities/home_list_items";
+import { useState } from "react";
+import useFetchPost from "../hooks/useFetch";
 
 const Home = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [setUrl, setContent, error] = useFetchPost();
+
   window.addEventListener("click", (_) => {
     if (window.location.href.includes("#projects-dropdown")) {
       window.location.href = window.location.href.replace(
@@ -21,6 +32,16 @@ const Home = () => {
       );
     }
   });
+  const handelSubmitForm = (e) => {
+    e.preventDefault();
+    const content = {
+      name: name,
+      email: email,
+      message: message,
+    };
+    setContent(content);
+    setUrl("/chat");
+  };
   return (
     <div className="home">
       <header className="home__header">
@@ -125,7 +146,75 @@ const Home = () => {
         >
           <ProjectsSection projectsList={schoolProjects} sectionName="school" />
         </section>
-        <section className="home__work" id="work-exp"></section>
+        <section className="home__work" id="work-exp">
+          <div className="container">
+            <p className="section-heading mb-md">work experience</p>
+            {workExperience.map((work, index) => {
+              return <WorkTile key={index} work={work} />;
+            })}
+          </div>
+        </section>
+        <section className="home__education" id="education">
+          <div className="container">
+            <p className="section-heading mb-md">education</p>
+            <div className="home__education-items">
+              {education.map((school, index) => {
+                return <EducationTile school={school} key={index} />;
+              })}
+            </div>
+          </div>
+        </section>
+        <section className="home__chat" id="chat">
+          <div className="container">
+            <p className="section-heading">let's chat</p>
+          </div>
+          <div className="form-container mt-md">
+            <form onSubmit={handelSubmitForm} method="POST" className="form">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                className="form__input"
+                placeholder="Name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
+              <label htmlFor="name" className="form__label">
+                name
+              </label>
+
+              <input
+                type="email"
+                name="email"
+                id="email"
+                className="form__input"
+                placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <label htmlFor="email" className="form__label">
+                email
+              </label>
+
+              <textarea
+                name="message"
+                id="message"
+                rows="10"
+                placeholder="Message"
+                className="form__input form__input--textfield"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+              ></textarea>
+              <label htmlFor="message" className="form__label">
+                message
+              </label>
+
+              <button type="submit" className="btn btn--fill form__button">
+                submit
+              </button>
+            </form>
+          </div>
+        </section>
       </main>
     </div>
   );

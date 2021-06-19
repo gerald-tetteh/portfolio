@@ -15,6 +15,8 @@ import nyahoIcon from "../images/nyaho.png";
 import charlotteIcon from "../images/charlotte.svg";
 import todoIcon from "../images/todo.png";
 import maniacIcon from "../images/InfoManiac.png";
+import ashesiIcon from "../images/ashesi.jpeg";
+import presecIcon from "../images/presec.jpg";
 
 export const skills = [
   {
@@ -163,5 +165,17 @@ export const workExperience = [
     icon: charlotteIcon,
     content:
       "Developed both front-end and back-end components of a website for a private school; Charlotte’s Memorial School. The website allows the school management to display announcements and the school calender.",
+  },
+];
+export const education = [
+  {
+    alt: "Ashesi",
+    icon: ashesiIcon,
+    heading: "Ashesi University",
+  },
+  {
+    alt: "Presbyterian Boys Secondary School Legon",
+    icon: presecIcon,
+    heading: "PRESEC LEGON",
   },
 ];

@@ -49,58 +49,58 @@ body {
   color: #FFCE8A !important; }
 
 .bg-dark {
-  background-color: #1e2233;
-  padding: 1rem;
-  border-radius: 5px;
-  z-index: 10000; }
+  background-color: #1e2233 !important;
+  padding: 1rem !important;
+  border-radius: 5px !important;
+  z-index: 10000 !important; }
 
 .bg-transparent {
-  background-color: transparent; }
+  background-color: transparent !important; }
 
 .hide-content {
-  transform: translateY(60rem); }
+  transform: translateY(60rem) !important; }
 
 .mt-md {
-  margin-top: 4rem; }
+  margin-top: 4rem !important; }
 
 .mb-sm {
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem !important; }
 
 .mr-md {
-  margin-right: 4rem; }
+  margin-right: 4rem !important; }
 
 .mb-md {
-  margin-bottom: 4rem; }
+  margin-bottom: 4rem !important; }
 
 .mb-xs {
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem !important; }
 
 .p-xs {
-  padding: 0.7rem; }
+  padding: 0.7rem !important; }
 
 .pl-sm {
-  padding-left: 2rem; }
+  padding-left: 2rem !important; }
 
 .color-gold {
-  color: #FFCE8A; }
+  color: #FFCE8A !important; }
 
 .color-purple {
-  color: #AF20D2; }
+  color: #AF20D2 !important; }
 
 .color-green {
-  color: #21DE34; }
+  color: #21DE34 !important; }
 
 .color-blue {
-  color: #00B5F8; }
+  color: #00B5F8 !important; }
 
 .color-brown {
-  color: #7b685f; }
+  color: #7b685f !important; }
 
 .color-orange {
-  color: #E28743; }
+  color: #E28743 !important; }
 
 .color-green-pale {
-  color: #71BE95; }
+  color: #71BE95 !important; }
 
 .navbar {
   display: flex;
@@ -196,6 +196,23 @@ body {
   .btn--outline:hover {
     color: #fff !important; }
 
+.btn--fill {
+  border: none;
+  padding: 1.5rem 10rem;
+  color: #1e2233;
+  background-color: #FFCE8A;
+  font-size: 2rem;
+  text-transform: uppercase;
+  border-radius: 5px;
+  box-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+  transition: all 0.2s; }
+  .btn--fill:hover {
+    color: #fff;
+    transform: translateY(-1rem); }
+  .btn--fill:active {
+    transform: translateY(0);
+    box-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.25); }
+
 .dropdown {
   position: relative; }
   .dropdown__menu {
@@ -207,7 +224,7 @@ body {
     color: #1e2233;
     border-radius: 5px;
     padding: 1rem 2rem;
-    box-shadow: 0px 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+    box-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
     visibility: hidden;
     opacity: 0;
     transition: all 0.2s; }
@@ -298,6 +315,112 @@ body {
     position: absolute;
     left: 1rem;
     bottom: 1.5rem; }
+
+.work-tile {
+  display: flex;
+  background-color: #1e2233;
+  padding: 3rem 3rem;
+  border-radius: 5px;
+  border: 2px solid #FFCE8A;
+  align-items: flex-start;
+  margin-bottom: 4rem; }
+  @media only screen and (max-width: 37.5em) {
+    .work-tile {
+      flex-direction: column; } }
+  .work-tile__image {
+    max-width: 15rem;
+    width: 100%;
+    align-self: center;
+    margin-right: 1rem;
+    padding: 1rem; }
+    .work-tile__image img {
+      width: 100%; }
+  .work-tile__heading {
+    color: #FFCE8A;
+    font-size: 3.6rem;
+    font-family: "Viaoda Libre", cursive;
+    margin-bottom: 1rem; }
+    @media only screen and (max-width: 37.5em) {
+      .work-tile__heading {
+        text-align: center; } }
+  .work-tile__content {
+    font-size: 2.4rem;
+    color: #fff; }
+
+.education {
+  max-width: 30rem;
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 2rem; }
+  .education__image {
+    height: 25rem;
+    border-radius: 5px;
+    width: 100%;
+    object-fit: cover; }
+  .education__text {
+    position: absolute;
+    bottom: 0.3rem;
+    border-radius: 0 0 5px 5px;
+    left: 0;
+    right: 0;
+    text-align: right;
+    color: #fff;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 2.4rem; }
+
+.form {
+  display: flex;
+  flex-direction: column; }
+  .form-container {
+    width: 40%;
+    margin: 0 auto; }
+  .form__input {
+    outline: none;
+    font-family: "Ubuntu Mono", monospace;
+    font-size: 2.4rem;
+    padding: 1.5rem 1rem;
+    color: #fff;
+    background-color: #1e2233;
+    border: none;
+    border-bottom: 2px solid #fff;
+    transition: all 0.2s;
+    margin-bottom: 1rem; }
+    .form__input:focus {
+      border-bottom: 2px solid #FFCE8A; }
+      .form__input:focus:invalid {
+        border-bottom: 2px solid #ac3b44; }
+  .form__label {
+    color: #FFCE8A;
+    font-size: 2.4rem;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    transition: all 0.2s; }
+  .form__button {
+    align-self: center; }
+  .form__input:placeholder-shown + .form__label {
+    transform: translateY(-5.2rem);
+    opacity: 0;
+    visibility: hidden; }
+  .form__input--textfield:placeholder-shown + .form__label {
+    transform: translateY(-26.6rem); }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #fff;
+  -webkit-box-shadow: 0 0 0px 1000px #1e2233 inset;
+  box-shadow: 0 0 0px 1000px #1e2233 inset;
+  transition: background-color 5000s ease-in-out 0s; }
 
 .home__header {
   position: relative;
@@ -416,6 +539,28 @@ body {
     background-image: linear-gradient(180deg, rgba(31, 35, 52, 0.83), rgba(31, 35, 52, 0.83)), url(../images/station.jpg); }
   .home__projects--personal {
     background-image: linear-gradient(180deg, rgba(31, 35, 52, 0.83), rgba(31, 35, 52, 0.83)), url(../images/project-personal.jpg); }
+
+.home__work {
+  padding: 4rem 0;
+  background-color: #303551; }
+
+.home__education {
+  padding: 4rem 0;
+  background-color: #1e2233; }
+  .home__education-items {
+    display: flex;
+    justify-content: space-around; }
+    @media only screen and (max-width: 37.5em) {
+      .home__education-items {
+        flex-direction: column;
+        align-items: center; } }
+
+.home__chat {
+  padding: 4rem 0;
+  background-image: linear-gradient(120deg, #303551 45%, transparent 45%), url(../images/form-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
 
 .about-me__col-1 {
   display: flex;

@@ -1,0 +1,64 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  &-container {
+    width: 40%;
+    margin: 0 auto;
+  }
+
+  &__input {
+    outline: none;
+    font-family: $font-ubuntu-mono;
+    font-size: 2.4rem;
+    padding: 1.5rem 1rem;
+    color: $color-white;
+    background-color: $color-black;
+    border: none;
+    border-bottom: 2px solid $color-white;
+    transition: $transition-small;
+    margin-bottom: 1rem;
+    
+    &:focus {
+      border-bottom: 2px solid $color-gold;
+
+      &:invalid {
+        border-bottom: 2px solid $color-red;
+      }
+    }
+  }
+  &__label {
+    color: $color-gold;
+    font-size: 2.4rem;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    transition: $transition-small;
+  }
+  &__button {
+    align-self: center;
+  }
+
+  &__input:placeholder-shown + &__label {
+    transform: translateY(-5.2rem);
+    opacity: 0;
+    visibility: hidden;
+  }
+  &__input--textfield:placeholder-shown +  &__label {
+    transform: translateY(-26.6rem);
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: $color-white;
+  -webkit-box-shadow: 0 0 0px 1000px $color-black inset;
+  box-shadow: 0 0 0px 1000px $color-black inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
