@@ -138,6 +138,27 @@
     padding: 4rem 0;
     background-color: $color-light-blue;
   }
+  &__education {
+    padding: 4rem 0;
+    background-color: $color-black;
+
+    &-items {
+      display: flex;
+      justify-content: space-around;
+
+      @include respond(phone) {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+  &__chat {
+    padding: 4rem 0;
+    background-image: linear-gradient(120deg, $color-light-blue 45%, transparent 45%), url(../images/form-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 }
 
 .about-me {

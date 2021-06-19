@@ -3,6 +3,7 @@ import Navbar from "../components/global/Navbar";
 import ProjectsSection from "../components/home/ProjectsSection";
 import SkillsTile from "../components/home/SkillsTile";
 import WorkTile from "../components/home/WorkTile";
+import EducationTile from "../components/home/EducationTile";
 import instagramImage from "../images/instagram.svg";
 import githubImage from "../images/github.svg";
 import linkedInImage from "../images/linkedin.svg";
@@ -12,6 +13,7 @@ import {
   projectsPersonal,
   schoolProjects,
   workExperience,
+  education,
 } from "../utilities/home_list_items";
 
 const Home = () => {
@@ -133,6 +135,61 @@ const Home = () => {
             {workExperience.map((work, index) => {
               return <WorkTile key={index} work={work} />;
             })}
+          </div>
+        </section>
+        <section className="home__education" id="education">
+          <div className="container">
+            <p className="section-heading mb-md">education</p>
+            <div className="home__education-items">
+              {education.map((school, index) => {
+                return <EducationTile school={school} key={index} />;
+              })}
+            </div>
+          </div>
+        </section>
+        <section className="home__chat" id="chat">
+          <div className="container">
+            <p className="section-heading">let's chat</p>
+          </div>
+          <div className="form-container mt-md">
+            <form method="POST" className="form">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                className="form__input"
+                placeholder="Name"
+              />
+              <label htmlFor="name" className="form__label">
+                name
+              </label>
+
+              <input
+                type="email"
+                name="email"
+                id="email"
+                className="form__input"
+                placeholder="Email"
+              />
+              <label htmlFor="email" className="form__label">
+                email
+              </label>
+
+              <textarea
+                name="message"
+                id="message"
+                rows="10"
+                placeholder="Message"
+                className="form__input form__input--textfield"
+              ></textarea>
+              <label htmlFor="message" className="form__label">
+                message
+              </label>
+
+              <button type="submit" className="btn btn--fill form__button">
+                submit
+              </button>
+            </form>
           </div>
         </section>
       </main>
