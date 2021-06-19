@@ -17,7 +17,7 @@
     border-bottom: 2px solid $color-white;
     transition: $transition-small;
     margin-bottom: 1rem;
-
+    
     &:focus {
       border-bottom: 2px solid $color-gold;
 
@@ -46,4 +46,19 @@
   &__input--textfield:placeholder-shown +  &__label {
     transform: translateY(-26.6rem);
   }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: $color-white;
+  -webkit-box-shadow: 0 0 0px 1000px $color-black inset;
+  box-shadow: 0 0 0px 1000px $color-black inset;
+  transition: background-color 5000s ease-in-out 0s;
 }

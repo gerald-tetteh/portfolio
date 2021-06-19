@@ -15,8 +15,13 @@ import {
   workExperience,
   education,
 } from "../utilities/home_list_items";
+import { useState } from "react";
 
 const Home = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
   window.addEventListener("click", (_) => {
     if (window.location.href.includes("#projects-dropdown")) {
       window.location.href = window.location.href.replace(
@@ -25,6 +30,9 @@ const Home = () => {
       );
     }
   });
+  const handelSubmitForm = (e) => {
+    e.preventDefault();
+  };
   return (
     <div className="home">
       <header className="home__header">
@@ -152,13 +160,15 @@ const Home = () => {
             <p className="section-heading">let's chat</p>
           </div>
           <div className="form-container mt-md">
-            <form method="POST" className="form">
+            <form onSubmit={handelSubmitForm} method="POST" className="form">
               <input
                 type="text"
                 name="name"
                 id="name"
                 className="form__input"
                 placeholder="Name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
               />
               <label htmlFor="name" className="form__label">
                 name
@@ -170,6 +180,8 @@ const Home = () => {
                 id="email"
                 className="form__input"
                 placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
               <label htmlFor="email" className="form__label">
                 email
@@ -181,6 +193,8 @@ const Home = () => {
                 rows="10"
                 placeholder="Message"
                 className="form__input form__input--textfield"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
               ></textarea>
               <label htmlFor="message" className="form__label">
                 message
