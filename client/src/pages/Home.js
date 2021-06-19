@@ -4,6 +4,7 @@ import ProjectsSection from "../components/home/ProjectsSection";
 import SkillsTile from "../components/home/SkillsTile";
 import WorkTile from "../components/home/WorkTile";
 import EducationTile from "../components/home/EducationTile";
+import LineLoader from "../components/global/LineLoader";
 import instagramImage from "../images/instagram.svg";
 import githubImage from "../images/github.svg";
 import linkedInImage from "../images/linkedin.svg";
@@ -15,14 +16,14 @@ import {
   workExperience,
   education,
 } from "../utilities/home_list_items";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import useFetchPost from "../hooks/useFetch";
 
 const Home = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [setUrl, setContent, error] = useFetchPost();
+  const [setUrl, setContent, error, isLoading] = useFetchPost();
 
   window.addEventListener("click", (_) => {
     if (window.location.href.includes("#projects-dropdown")) {
@@ -42,6 +43,14 @@ const Home = () => {
     setContent(content);
     setUrl("/chat");
   };
+
+  useEffect(() => {
+    if (!isLoading && !error) {
+      setName("");
+      setEmail("");
+      setMessage("");
+    }
+  }, [isLoading, error]);
   return (
     <div className="home">
       <header className="home__header">
@@ -209,9 +218,17 @@ const Home = () => {
                 message
               </label>
 
-              <button type="submit" className="btn btn--fill form__button">
-                submit
-              </button>
+              {error && (
+                <div className="form__errors mt-n-sm mb-sm">
+                  <p className="form__errors-message">Could not send email</p>
+                </div>
+              )}
+              {!isLoading && (
+                <button type="submit" className="btn btn--fill form__button">
+                  submit
+                </button>
+              )}
+              {isLoading && <LineLoader />}
             </form>
           </div>
         </section>

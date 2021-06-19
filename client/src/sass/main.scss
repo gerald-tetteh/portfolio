@@ -2,6 +2,7 @@
 @import "abstracts/mixins";
 @import "abstracts/variables";
 
+@import "base/animations";
 @import "base/base";
 @import "base/typography";
 @import "base/utilities";
@@ -14,5 +15,6 @@
 @import "components/work_tile";
 @import "components/education-tile";
 @import "components/form";
+@import "components/loader";
 
 @import "pages/home";

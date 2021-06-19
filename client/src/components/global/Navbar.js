@@ -23,7 +23,7 @@ const Navbar = () => {
 
   return (
     <nav ref={navbarRef} className="navbar container">
-      <Link to="#" className="navbar__brand">
+      <Link to="/" className="navbar__brand">
         Addo Develop
       </Link>
       <ul className="navbar__navigation">

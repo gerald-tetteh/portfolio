@@ -1,4 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400&family=Viaoda+Libre&display=swap");
+@keyframes lineLoaderAnimation {
+  0% {
+    left: -10%;
+    width: 10%; }
+  50% {
+    left: 90%;
+    width: 50%; }
+  100% {
+    left: -10%;
+    width: 10%; } }
+
 *,
 *::before,
 *::after {
@@ -62,6 +73,9 @@ body {
 
 .mt-md {
   margin-top: 4rem !important; }
+
+.mt-n-sm {
+  margin-top: -2rem !important; }
 
 .mb-sm {
   margin-bottom: 2rem !important; }
@@ -377,6 +391,15 @@ body {
   .form-container {
     width: 40%;
     margin: 0 auto; }
+    @media only screen and (max-width: 56.25em) {
+      .form-container {
+        width: 50%; } }
+    @media only screen and (max-width: 37.5em) {
+      .form-container {
+        width: 70%; } }
+    @media only screen and (max-width: 25em) {
+      .form-container {
+        width: 90%; } }
   .form__input {
     outline: none;
     font-family: "Ubuntu Mono", monospace;
@@ -401,6 +424,10 @@ body {
     transition: all 0.2s; }
   .form__button {
     align-self: center; }
+  .form__errors {
+    margin: 0 auto;
+    font-size: 2.4rem;
+    color: #ac3b44; }
   .form__input:placeholder-shown + .form__label {
     transform: translateY(-5.2rem);
     opacity: 0;
@@ -421,6 +448,19 @@ select:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0px 1000px #1e2233 inset;
   box-shadow: 0 0 0px 1000px #1e2233 inset;
   transition: background-color 5000s ease-in-out 0s; }
+
+.loader--line {
+  background-color: #FFCE8A;
+  height: 5px;
+  position: absolute;
+  animation: lineLoaderAnimation 3s infinite ease-in-out; }
+  .loader--line-container {
+    margin: auto;
+    width: 50%;
+    overflow: hidden;
+    position: relative;
+    height: 5px;
+    background-color: #1e2233; }
 
 .home__header {
   position: relative;
