@@ -16,11 +16,13 @@ import {
   education,
 } from "../utilities/home_list_items";
 import { useState } from "react";
+import useFetchPost from "../hooks/useFetch";
 
 const Home = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [setUrl, setContent, error] = useFetchPost();
 
   window.addEventListener("click", (_) => {
     if (window.location.href.includes("#projects-dropdown")) {
@@ -32,6 +34,13 @@ const Home = () => {
   });
   const handelSubmitForm = (e) => {
     e.preventDefault();
+    const content = {
+      name: name,
+      email: email,
+      message: message,
+    };
+    setContent(content);
+    setUrl("/chat");
   };
   return (
     <div className="home">

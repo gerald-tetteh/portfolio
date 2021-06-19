@@ -1,17 +1,26 @@
-const path = require("path");
-
 const express = require("express");
 const session = require("express-session");
 const csurf = require("csurf");
 
-const app = express();
+const adminRoutes = require("./routes/admin");
+const homeRoutes = require("./routes/home");
+const config = require("./utilities/envVariables");
 
-require("dotenv").config({
-  path: path.join(__dirname, "..", "server", ".env"),
-});
+const app = express();
+const csrfProtection = csurf();
 
 app.use(express.json());
-app.use(session({}));
+app.use(
+  session({
+    secret: config.secretKey,
+    resave: false,
+    saveUninitialized: false,
+  })
+);
+app.use(csrfProtection);
+
+app.use("/admin", adminRoutes);
+app.use(homeRoutes);
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
