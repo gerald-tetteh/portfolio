@@ -4,8 +4,8 @@
   "description": "My portfolio",
   "main": "app.js",
   "scripts": {
-    "start-server": "nodemon app.js",
-    "start": "node app.js",
+    "start-server": "nodemon server/app.js",
+    "start": "node server/app.js",
     "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "repository": {
