@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const navbarRef = useRef();
 
-  const handelOnScroll = () => {
+  const handelChangeBackground = () => {
     if (navbarRef.current === undefined) {
       return;
     }
@@ -18,8 +18,7 @@ const Navbar = () => {
       navbarRef.current.classList.add("bg-transparent");
     }
   };
-
-  window.addEventListener("scroll", handelOnScroll);
+  window.addEventListener("scroll", handelChangeBackground);
 
   return (
     <nav ref={navbarRef} className="navbar container">
@@ -27,7 +26,7 @@ const Navbar = () => {
         Addo Develop
       </Link>
       <ul className="navbar__navigation">
-        <li className="navbar__navigation-item active">
+        <li className="navbar__navigation-item">
           <a href="#skills">Skills</a>
         </li>
         <li className="navbar__navigation-item dropdown" id="projects-dropdown">
