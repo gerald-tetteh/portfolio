@@ -6,4 +6,12 @@ exports.getAppAdsText = (req, res, next) =>
     path.join(__dirname, "..", "public", "documents", "app-ads.txt")
   );
 exports.getCv = (req, res, next) =>
-  res.download("./public/documents/Gerald_Addo-Tetteh_CVs.zip");
+  res.download(
+    path.join(
+      __dirname,
+      "..",
+      "public",
+      "documents",
+      "Gerald_Addo-Tetteh_CVs.zip"
+    )
+  );
