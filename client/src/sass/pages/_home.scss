@@ -100,6 +100,9 @@
       width: auto;
       height: 100%;
     }
+    &--4 img {
+      filter: invert(98%) sepia(76%) saturate(5409%) hue-rotate(303deg) brightness(111%) contrast(101%);
+    }
   }
 
   &__about-me {

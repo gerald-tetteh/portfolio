@@ -11,6 +11,7 @@ import instagramImage from "../images/instagram.svg";
 import githubImage from "../images/github.svg";
 import linkedInImage from "../images/linkedin.svg";
 import aboutMeImage from "../images/who-am-i.svg";
+import cvIcon from "../images/cv.svg";
 import {
   skills,
   projectsPersonal,
@@ -83,9 +84,11 @@ const Home = () => {
       <header className="home__header">
         <div className="home__text-container">
           <p className="home__text-pre">Hello, I'm</p>
-          <h1 className="home__heading">Gerald Addo-Tetteh</h1>
+          <h1 className="home__heading">
+            Gerald <br /> Addo-Tetteh
+          </h1>
           <p className="home__text-sub">
-            Web Developer & Flutter Developer & Electrical Engineering Student
+            Web Developer / Flutter Developer / Electrical Engineering Student
           </p>
           <div className="home__icons">
             <a
@@ -111,6 +114,9 @@ const Home = () => {
               className="home__icon home__icon--3"
             >
               <img src={linkedInImage} alt="LinkedIn Icon" />
+            </a>
+            <a href="/cv" className="home__icon home__icon--4">
+              <img src={cvIcon} alt="CV Icon" />
             </a>
           </div>
         </div>
@@ -144,7 +150,7 @@ const Home = () => {
               <span className="color-orange">electrical engineering</span> at
               Ashesi University, and I also build websites and{" "}
               <span className="color-green-pale">android applications</span>.
-              Some of my work is below.
+              Below is some of my work.
             </p>
           </div>
         </section>
