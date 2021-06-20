@@ -1,5 +1,6 @@
 // Home page
-import Navbar from "../components/global/Navbar";
+import Navbar from "../components/home/Navbar";
+import MobileNav from "../components/home/MobileNav";
 import ProjectsSection from "../components/home/ProjectsSection";
 import SkillsTile from "../components/home/SkillsTile";
 import WorkTile from "../components/home/WorkTile";
@@ -54,7 +55,7 @@ const Home = () => {
   return (
     <div className="home">
       <Navbar />
-      <div className="navbar__navigation-mobile invisible"></div>
+      <MobileNav />
       <header className="home__header">
         <div className="home__text-container">
           <p className="home__text-pre">Hello, I'm</p>

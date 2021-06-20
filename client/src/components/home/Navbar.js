@@ -21,8 +21,10 @@ const Navbar = () => {
     // checked is initial state
     if (!checkbox.checked) {
       mobileNavigation.classList.remove("invisible");
+      mobileNavigation.classList.add("mobile-nav-background");
     } else {
       mobileNavigation.classList.add("invisible");
+      mobileNavigation.classList.remove("mobile-nav-background");
     }
   };
   window.addEventListener("scroll", handelChangeBackground);
