@@ -20,6 +20,10 @@
 .hide-content {
   transform: translateY(60rem) !important;
 }
+.invisible {
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
 
 .mt-md {
   margin-top: 4rem !important;

@@ -7,7 +7,7 @@
   right: 0;
   top: 5px;
   transition: $transition-small;
-  z-index: 1000;
+  z-index: 3000;
 
   &__brand {
     &,
@@ -51,6 +51,17 @@
       }
     }
   }
+  &__navigation-mobile {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 2000;
+    transition: $transition-small;
+    background-image: radial-gradient(160.47% 160.47% at 96.67% 0%, 
+      $color-gold 0%, $color-white 85.12%);;
+  }
   &__mobile {
     padding: 10px;
     background-color: $color-gold;
@@ -59,6 +70,7 @@
     height: 40px;
     align-self: center;
     display: none;
+    transition: $transition-small;
 
     @include respond(tab-land-sm) {
       display: block;
@@ -101,9 +113,14 @@
   &__checkbox:checked + &__mobile &__mobile-icon::before {
     transform: rotate(45deg);
     bottom: 0;
+    background-color: $color-gold;
   }
   &__checkbox:checked + &__mobile &__mobile-icon::after {
     transform: rotate(-45deg);
     top: 0;
+    background-color: $color-gold;
+  }
+  &__checkbox:checked + &__mobile {
+    background-color: $color-black;
   }
 }

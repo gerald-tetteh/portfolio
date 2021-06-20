@@ -44,7 +44,6 @@ const Home = () => {
     setContent(content);
     setUrl("/chat");
   };
-
   useEffect(() => {
     if (!isLoading && !error) {
       setName("");
@@ -54,8 +53,9 @@ const Home = () => {
   }, [isLoading, error]);
   return (
     <div className="home">
+      <Navbar />
+      <div className="navbar__navigation-mobile invisible"></div>
       <header className="home__header">
-        <Navbar />
         <div className="home__text-container">
           <p className="home__text-pre">Hello, I'm</p>
           <h1 className="home__heading">Gerald Addo-Tetteh</h1>
