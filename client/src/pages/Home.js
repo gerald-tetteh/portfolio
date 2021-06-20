@@ -5,6 +5,7 @@ import SkillsTile from "../components/home/SkillsTile";
 import WorkTile from "../components/home/WorkTile";
 import EducationTile from "../components/home/EducationTile";
 import LineLoader from "../components/global/LineLoader";
+import Footer from "../components/global/Footer";
 import instagramImage from "../images/instagram.svg";
 import githubImage from "../images/github.svg";
 import linkedInImage from "../images/linkedin.svg";
@@ -233,6 +234,7 @@ const Home = () => {
           </div>
         </section>
       </main>
+      <Footer />
     </div>
   );
 };

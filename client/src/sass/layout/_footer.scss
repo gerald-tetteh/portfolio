@@ -1,0 +1,66 @@
+.footer {
+  background-color: $color-black;
+  padding-top: 4rem;
+
+  &__heading {
+    font-size: 4.8rem;
+    color: $color-white;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+  &__sub-heading {
+    font-size: 2rem;
+    font-style: italic;
+    color: $color-gold;
+    text-transform: capitalize;
+  }
+  &__social {
+    background-color: $color-light-blue;
+    margin: 5rem 0;
+
+    & .container {
+      padding: 0.5rem;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      @include respond(tab-port) {
+        flex-direction: column;
+        align-items: flex-start;
+
+        & > * {
+          margin: 1rem 0;
+        }
+      }
+    }
+
+    &-text {
+      font-size: 2.4rem;
+      color: $color-white;
+    }
+  }
+  &__icon {
+
+    & img {
+      height: 3rem;
+      width: auto;
+    }
+    &:nth-of-type(2) {
+      margin: 0 10rem;
+
+      @include respond(tab-land) {
+        margin: 0 5rem;
+      }
+    }
+  }
+  &__caption {
+    margin-top: 7rem;
+    text-align: center;
+    font-family: $font-dancing-script;
+    font-size: 2.4rem;
+    color: $color-gold;
+    background-color: $color-light-blue;
+    padding: 1rem 0;
+  }
+}

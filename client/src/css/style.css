@@ -79,6 +79,9 @@ body {
 .mb-sm {
   margin-bottom: 2rem !important; }
 
+.mr-xs {
+  margin-right: 1rem !important; }
+
 .mr-md {
   margin-right: 4rem !important; }
 
@@ -461,6 +464,54 @@ select:-webkit-autofill:focus {
     position: relative;
     height: 5px;
     background-color: #1e2233; }
+
+.footer {
+  background-color: #1e2233;
+  padding-top: 4rem; }
+  .footer__heading {
+    font-size: 4.8rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 1rem; }
+  .footer__sub-heading {
+    font-size: 2rem;
+    font-style: italic;
+    color: #FFCE8A;
+    text-transform: capitalize; }
+  .footer__social {
+    background-color: #303551;
+    margin: 5rem 0; }
+    .footer__social .container {
+      padding: 0.5rem;
+      display: flex;
+      justify-content: space-around;
+      align-items: center; }
+      @media only screen and (max-width: 56.25em) {
+        .footer__social .container {
+          flex-direction: column;
+          align-items: flex-start; }
+          .footer__social .container > * {
+            margin: 1rem 0; } }
+    .footer__social-text {
+      font-size: 2.4rem;
+      color: #fff; }
+  .footer__icon img {
+    height: 3rem;
+    width: auto; }
+  .footer__icon:nth-of-type(2) {
+    margin: 0 10rem; }
+    @media only screen and (max-width: 75em) {
+      .footer__icon:nth-of-type(2) {
+        margin: 0 5rem; } }
+  .footer__caption {
+    margin-top: 7rem;
+    text-align: center;
+    font-family: "Dancing Script", cursive;
+    font-size: 2.4rem;
+    color: #FFCE8A;
+    background-color: #303551;
+    padding: 1rem 0; }
 
 .home__header {
   position: relative;
