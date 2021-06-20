@@ -45,6 +45,28 @@ const Home = () => {
     setContent(content);
     setUrl("/chat");
   };
+  const handelAddCsrfToken = () => {
+    if (!isLoading) {
+      fetch("/admin/csrf", {
+        method: "GET",
+      })
+        .then((result) => {
+          return result.json();
+        })
+        .then(({ csrfToken }) => {
+          const headTag = document.querySelector("head");
+          // ensures an new csrf token is placed
+          if (document.querySelector('meta[name="csrf-token"]')) {
+            document
+              .querySelector('meta[name="csrf-token"]')
+              .setAttribute("content", `${csrfToken}`);
+          } else {
+            headTag.innerHTML += `<meta name="csrf-token" content="${csrfToken}">`;
+          }
+        })
+        .catch((e) => console.log(e.message));
+    }
+  };
   useEffect(() => {
     if (!isLoading && !error) {
       setName("");
@@ -52,6 +74,8 @@ const Home = () => {
       setMessage("");
     }
   }, [isLoading, error]);
+  useEffect(handelAddCsrfToken, [isLoading]);
+
   return (
     <div className="home">
       <Navbar />

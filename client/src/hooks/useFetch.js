@@ -13,41 +13,29 @@ const useFetchPost = () => {
     const abortController = new AbortController();
     if (url) {
       setIsLoading(true);
-      fetch("/admin/csrf", {
+      const csrfToken = document
+        .querySelector('meta[name="csrf-token"]')
+        .getAttribute("content");
+      fetch(url, {
         signal: abortController.signal,
-        method: "GET",
+        method: "POST",
+        body: JSON.stringify(content),
+        headers: {
+          "Content-Type": "application/json",
+          "csrf-token": csrfToken,
+        },
       })
         .then((res) => {
-          return res.json();
-        })
-        .then((csrfToken) => {
-          fetch(url, {
-            signal: abortController.signal,
-            method: "POST",
-            body: JSON.stringify(content),
-            headers: {
-              "Content-Type": "application/json",
-              "csrf-token": csrfToken.csrfToken,
-            },
-          })
-            .then((res) => {
-              if (res.ok) {
-                setError(null);
-                setUrl(null);
-                setIsLoading(false);
-                return;
-              }
-              setError("Could not send email");
-              setUrl(null);
-              setIsLoading(false);
-              return;
-            })
-            .catch((err) => {
-              setError("Could not send email");
-              setUrl(null);
-              setIsLoading(false);
-              return;
-            });
+          if (res.ok) {
+            setError(null);
+            setUrl(null);
+            setIsLoading(false);
+            return;
+          }
+          setError("Could not send email");
+          setUrl(null);
+          setIsLoading(false);
+          return;
         })
         .catch((err) => {
           setError("Could not send email");
