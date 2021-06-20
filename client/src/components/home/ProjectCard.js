@@ -49,7 +49,7 @@ const ProjectCard = ({ project }) => {
             rel="noreferrer"
             className="btn btn--outline project-card__button"
           >
-            Read More &rarr;
+            View &rarr;
           </a>
         )}
       </div>

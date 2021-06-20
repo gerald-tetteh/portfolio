@@ -58,9 +58,35 @@
     left: 0;
     bottom: 0;
     z-index: 2000;
-    transition: $transition-small;
-    background-image: radial-gradient(160.47% 160.47% at 96.67% 0%, 
-      $color-gold 0%, $color-white 85.12%);;
+    display: none;
+    transition: all 0.4s ease-in-out;
+    background-image:radial-gradient(160.47% 160.47% at 100% 0%, 
+    rgba(255, 206, 138, 0.98) 90%, transparent 100%) !important;
+
+    @include respond(tab-land-sm) {
+      display: block;
+    }
+
+    &__list {
+      list-style: none;
+      @include absolute-center;
+      padding: 2rem 4rem;
+      background-color: $color-black;
+      border-radius: $border-radius;
+      box-shadow: $box-shadow;
+      width: 80%;
+    }
+    &__item {
+      margin: 3rem 0;
+      text-align: center;
+      font-size: 3rem;
+      & a,
+      & a:link,
+      & a:visited {
+        text-decoration: none;
+        color: $color-white;
+      }
+    }
   }
   &__mobile {
     padding: 10px;

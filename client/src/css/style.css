@@ -74,6 +74,9 @@ body {
   visibility: hidden !important;
   opacity: 0 !important; }
 
+.mobile-nav-background {
+  background-position: 0rem !important; }
+
 .mt-md {
   margin-top: 4rem !important; }
 
@@ -167,8 +170,32 @@ body {
     left: 0;
     bottom: 0;
     z-index: 2000;
-    transition: all 0.2s;
-    background-image: radial-gradient(160.47% 160.47% at 96.67% 0%, #FFCE8A 0%, #fff 85.12%); }
+    display: none;
+    transition: all 0.4s ease-in-out;
+    background-image: radial-gradient(160.47% 160.47% at 100% 0%, rgba(255, 206, 138, 0.98) 90%, transparent 100%) !important; }
+    @media only screen and (max-width: 43.75em) {
+      .navbar__navigation-mobile {
+        display: block; } }
+    .navbar__navigation-mobile__list {
+      list-style: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 2rem 4rem;
+      background-color: #1e2233;
+      border-radius: 5px;
+      box-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+      width: 80%; }
+    .navbar__navigation-mobile__item {
+      margin: 3rem 0;
+      text-align: center;
+      font-size: 3rem; }
+      .navbar__navigation-mobile__item a,
+      .navbar__navigation-mobile__item a:link,
+      .navbar__navigation-mobile__item a:visited {
+        text-decoration: none;
+        color: #fff; }
   .navbar__mobile {
     padding: 10px;
     background-color: #FFCE8A;
@@ -601,7 +628,7 @@ select:-webkit-autofill:focus {
   .home__text-sub {
     font-size: 2.4rem;
     font-style: italic;
-    color: #868DA6; }
+    color: #cac7c7; }
     @media only screen and (max-width: 82.75em) {
       .home__text-sub {
         font-size: 2rem; } }
@@ -619,6 +646,8 @@ select:-webkit-autofill:focus {
     .home__icon img {
       width: auto;
       height: 100%; }
+    .home__icon--4 img {
+      filter: invert(98%) sepia(76%) saturate(5409%) hue-rotate(303deg) brightness(111%) contrast(101%); }
   .home__about-me {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
