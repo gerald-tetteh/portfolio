@@ -1,0 +1,17 @@
+.loader {
+  &--line {
+    background-color: $color-gold;
+    height: 5px;
+    position: absolute;
+    animation: lineLoaderAnimation 3s infinite ease-in-out;
+
+    &-container {
+      margin: auto;
+      width: 50%;
+      overflow: hidden;
+      position: relative;
+      height: 5px;
+      background-color: $color-black;
+    }
+  }
+}

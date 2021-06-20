@@ -13,7 +13,6 @@
   background-color: #1e2233 !important;
   padding: 1rem !important;
   border-radius: $border-radius !important;
-  z-index: 10000 !important;
 }
 .bg-transparent {
   background-color: transparent !important;
@@ -21,12 +20,22 @@
 .hide-content {
   transform: translateY(60rem) !important;
 }
+.invisible {
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
 
 .mt-md {
   margin-top: 4rem !important;
 }
+.mt-n-sm {
+  margin-top: -2rem !important;
+}
 .mb-sm {
   margin-bottom: 2rem !important;
+}
+.mr-xs {
+  margin-right: 1rem !important;
 }
 .mr-md {
   margin-right: 4rem !important;

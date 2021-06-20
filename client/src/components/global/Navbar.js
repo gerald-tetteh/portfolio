@@ -1,33 +1,39 @@
 // navbar component
-import { useRef } from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  const navbarRef = useRef();
-
-  const handelOnScroll = () => {
-    if (navbarRef.current === undefined) {
-      return;
-    }
+  const handelChangeBackground = () => {
+    const navbarRef = document.querySelector(".navbar");
     if (window.pageYOffset > 0) {
-      navbarRef.current.classList.add("bg-dark");
-      navbarRef.current.classList.remove("bg-transparent");
+      navbarRef.classList.add("bg-dark");
+      navbarRef.classList.remove("bg-transparent");
     }
     if (window.pageYOffset === 0) {
-      navbarRef.current.classList.remove("bg-dark");
-      navbarRef.current.classList.add("bg-transparent");
+      navbarRef.classList.remove("bg-dark");
+      navbarRef.classList.add("bg-transparent");
     }
   };
-
-  window.addEventListener("scroll", handelOnScroll);
+  const handelClickCheckbox = () => {
+    const checkbox = document.querySelector(".navbar__checkbox");
+    const mobileNavigation = document.querySelector(
+      ".navbar__navigation-mobile"
+    );
+    // checked is initial state
+    if (!checkbox.checked) {
+      mobileNavigation.classList.remove("invisible");
+    } else {
+      mobileNavigation.classList.add("invisible");
+    }
+  };
+  window.addEventListener("scroll", handelChangeBackground);
 
   return (
-    <nav ref={navbarRef} className="navbar container">
-      <Link to="#" className="navbar__brand">
+    <nav className="navbar container">
+      <Link to="/" className="navbar__brand">
         Addo Develop
       </Link>
       <ul className="navbar__navigation">
-        <li className="navbar__navigation-item active">
+        <li className="navbar__navigation-item">
           <a href="#skills">Skills</a>
         </li>
         <li className="navbar__navigation-item dropdown" id="projects-dropdown">
@@ -59,7 +65,11 @@ const Navbar = () => {
         className="navbar__checkbox"
         hidden
       />
-      <label htmlFor="mobile-button" className="navbar__mobile">
+      <label
+        onClick={handelClickCheckbox}
+        htmlFor="mobile-button"
+        className="navbar__mobile"
+      >
         <span className="navbar__mobile-icon">&nbsp;</span>
       </label>
     </nav>

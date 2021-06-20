@@ -4,6 +4,16 @@
   &-container {
     width: 40%;
     margin: 0 auto;
+
+    @include respond(tab-port) {
+      width: 50%;
+    }
+    @include respond(phone) {
+      width: 70%;
+    }
+    @include custom-query(25em) {
+      width: 90%;
+    }
   }
 
   &__input {
@@ -36,6 +46,11 @@
   }
   &__button {
     align-self: center;
+  }
+  &__errors {
+    margin: 0 auto;
+    font-size: 2.4rem;
+    color: $color-red;
   }
 
   &__input:placeholder-shown + &__label {

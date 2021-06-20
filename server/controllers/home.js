@@ -33,9 +33,9 @@ exports.postChat = async (req, res, next) => {
         I will reply to that email soon.
       </p>
       <p>
-        Regards,
+        Regards,<br>
+        Gerald Addo-Tetteh.
       </p>
-      <p>Gerald Addo-Tetteh.</p>
       `,
       replyTo: "addodevelop@gmail.com",
     });
