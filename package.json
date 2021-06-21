@@ -4,9 +4,9 @@
   "description": "My portfolio",
   "main": "app.js",
   "scripts": {
-    "start-server": "nodemon app.js",
-    "start": "node app.js",
-    "heroku-postbuild": "cd ../client && npm install --only=dev && npm install && npm run build"
+    "start-server": "nodemon server/app.js",
+    "start": "node server/app.js",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "repository": {
     "type": "git",
