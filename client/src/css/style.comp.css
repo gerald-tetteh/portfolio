@@ -319,9 +319,10 @@ body {
     align-self: center;
     color: #fff;
     font-family: "Viaoda Libre", cursive;
-    font-size: 2rem; }
+    font-size: 2.4rem; }
   .skills-tile__content {
-    grid-column: 2 / 3; }
+    grid-column: 2 / 3;
+    font-size: 2.3rem; }
 
 .project-card {
   overflow: hidden;
@@ -750,3 +751,33 @@ select:-webkit-autofill:focus {
   scroll-behavior: smooth; }
   .projects__list::-webkit-scrollbar {
     display: none; }
+
+.no-route {
+  height: 100vh;
+  background-color: #303551; }
+  .no-route__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    justify-content: center; }
+    @media only screen and (max-width: 37.5em) {
+      .no-route__content {
+        flex-direction: column; } }
+  .no-route__heading {
+    color: #FFCE8A;
+    font-family: "Dancing Script", cursive;
+    font-size: 16rem; }
+  .no-route__sub-heading {
+    color: #fff;
+    margin-bottom: 4rem;
+    font-size: 3.6rem; }
+  .no-route__image {
+    width: 90%; }
+    @media only screen and (max-width: 37.5em) {
+      .no-route__image {
+        width: 70%; } }

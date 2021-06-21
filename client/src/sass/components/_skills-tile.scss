@@ -16,9 +16,10 @@
     align-self: center;
     color: $color-white;
     font-family: $font-viaoda-libre;
-    font-size: 2rem;
+    font-size: 2.4rem;
   }
   &__content {
     grid-column: 2 / 3;
+    font-size: 2.3rem;
   }
 }

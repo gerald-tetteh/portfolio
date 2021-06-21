@@ -1,0 +1,34 @@
+.no-route {
+  height: 100vh;
+  background-color: $color-light-blue;
+
+  &__content {
+    @include absolute-center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+
+    @include respond(phone) {
+      flex-direction: column;
+    }
+  }
+  &__heading {
+    color: $color-gold;
+    font-family: $font-dancing-script;
+    font-size: 16rem;
+  }
+  &__sub-heading {
+    color: $color-white;
+    margin-bottom: 4rem;
+    font-size: 3.6rem;
+  }
+  &__image {
+    width: 90%;
+
+    @include respond(phone) {
+      width: 70%;
+    }
+  }
+}
