@@ -38,7 +38,7 @@ export const skills = [
     icon: pythonIcon,
     heading: "Python Development",
     content:
-      "I develop web applications using Flask. I have some experience with machiene learning and webscrapping with python.",
+      "I develop web applications using Flask. I have some experience with machine learning and web scraping with python.",
   },
 ];
 export const projectsPersonal = [
@@ -136,7 +136,7 @@ export const workExperience = [
     heading: "Software Engineering Intern",
     icon: tunrtableIcon,
     content:
-      "Out of alomost a 100 applicants I was one of the few selected to work as a software engineering intern at Turntabl. At turntabl I learned and applied concents such as Agile developmnet, programming with python and Internet of things.",
+      "Out of alomost a 100 applicants I was one of the few selected to work as a software engineering intern at Turntabl. At Turntabl I learned and applied concents such as Agile developmnet, programming with python and Internet of things.",
   },
   {
     alt: "QKB Green Energy Company",
