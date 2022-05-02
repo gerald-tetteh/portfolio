@@ -17,6 +17,7 @@ import todoIcon from "../images/todo.png";
 import maniacIcon from "../images/InfoManiac.png";
 import ashesiIcon from "../images/ashesi.jpeg";
 import presecIcon from "../images/presec.jpg";
+import unrealIcon from "../images/unreal.svg";
 
 export const skills = [
   {
@@ -39,6 +40,13 @@ export const skills = [
     heading: "Python Development",
     content:
       "I develop web applications using Flask. I have some experience with machine learning and web scraping with python.",
+  },
+  {
+    alt: "Unreal Engine Icon",
+    icon: unrealIcon,
+    heading: "Game Development (Unreal)",
+    content:
+      "I am studying to develop games using Unreal Engine 5. I will post updates on that as I progress.",
   },
 ];
 export const projectsPersonal = [

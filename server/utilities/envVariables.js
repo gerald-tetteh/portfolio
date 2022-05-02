@@ -7,5 +7,6 @@ const config = {};
 
 config.secretKey = process.env.SESSION_SECRET;
 config.mailAuth = process.env.MAIL_AUTH;
+config.port = process.env.PORT;
 
 module.exports = config;
