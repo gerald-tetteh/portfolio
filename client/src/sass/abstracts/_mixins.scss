@@ -1,31 +1,52 @@
 // responsive design (size)
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {
-    @media only screen and (max-width: 37.5em) { @content };
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    }
   }
   @if $breakpoint == tab-port {
-    @media only screen and (max-width: 56.25em) { @content };
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    }
   }
   @if $breakpoint == tab-land-sm {
-    @media only screen and (max-width: 43.75em) { @content };
+    @media only screen and (max-width: 43.75em) {
+      @content;
+    }
   }
   @if $breakpoint == tab-land {
-    @media only screen and (max-width: 75em) { @content };
+    @media only screen and (max-width: 75em) {
+      @content;
+    }
   }
   @if $breakpoint == big-desktop {
-    @media only screen and (min-width: 112.5em) { @content };
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    }
   }
   @if $breakpoint == big-desktop-sm {
-    @media only screen and (min-width: 89.975em) { @content };
+    @media only screen and (min-width: 89.975em) {
+      @content;
+    }
   }
 }
 @mixin custom-query($breakpoint) {
-  @media only screen and (max-width: #{$breakpoint}) { @content };
+  @media only screen and (max-width: #{$breakpoint}) {
+    @content;
+  }
+}
+@mixin custom-query-h($breakpoint) {
+  @media only screen and (max-height: #{$breakpoint}) {
+    @content;
+  }
 }
 
 // feature media queries
 @mixin no-hover {
-  @media (hover: none) { @content };
+  @media (hover: none) {
+    @content;
+  }
 }
 
 // styles mixins
@@ -33,5 +54,5 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }

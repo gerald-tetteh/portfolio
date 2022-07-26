@@ -1075,6 +1075,11 @@ select:-webkit-autofill:focus {
   grid-template-columns: repeat(12, 1fr);
   position: relative;
 }
+@media only screen and (max-width: 37.5em) {
+  .home-page {
+    grid-template-rows: repeat(12, 1fr);
+  }
+}
 .home-page__sidebar {
   grid-column: 1/2;
   background-color: #262626;
@@ -1084,12 +1089,35 @@ select:-webkit-autofill:focus {
   align-items: center;
   padding-block: 2rem;
 }
+@media only screen and (max-width: 37.5em) {
+  .home-page__sidebar {
+    grid-row: 1/2;
+    grid-column: 1/13;
+    flex-direction: row;
+    padding-inline: 2rem;
+  }
+}
 .home-page__sidebar__links, .home-page__sidebar__text {
   animation: sidebarFadeIn 0.4s ease-in;
+}
+@media only screen and (max-width: 37.5em) {
+  .home-page__sidebar__links {
+    display: flex;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .home-page__sidebar__link {
+    margin-right: 2rem;
+  }
 }
 .home-page__sidebar__link a, .home-page__sidebar__link a:link, .home-page__sidebar__link a:visited {
   color: #cac7c7;
   font-size: 2rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .home-page__sidebar__link a, .home-page__sidebar__link a:link, .home-page__sidebar__link a:visited {
+    font-size: 3rem;
+  }
 }
 .home-page__sidebar__link a:hover {
   color: #21de34;
@@ -1102,6 +1130,11 @@ select:-webkit-autofill:focus {
   border-bottom: 1px solid #595959;
   z-index: 10;
   animation: navFadeIn 0.4s ease-in;
+}
+@media only screen and (max-width: 37.5em) {
+  .home-page__nav {
+    display: none;
+  }
 }
 .home-page__nav__list {
   display: flex;
@@ -1142,9 +1175,20 @@ select:-webkit-autofill:focus {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
 }
+@media only screen and (max-width: 37.5em) {
+  .home-page__main {
+    grid-column: 1/13;
+    grid-row: 2/13;
+  }
+}
 .home-page__section {
   height: 100vh;
   scroll-snap-align: start;
+}
+@media only screen and (max-width: 37.5em) {
+  .home-page__section {
+    height: 100%;
+  }
 }
 .home-page__section-1 {
   position: relative;
@@ -1154,7 +1198,18 @@ select:-webkit-autofill:focus {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 50%;
+  width: 55%;
+}
+@media only screen and (max-width: 43.75em) {
+  .home-page__section-1__content {
+    width: 65%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .home-page__section-1__content {
+    width: 90%;
+    top: 48%;
+  }
 }
 .home-page__section-1__heading {
   text-align: center;
@@ -1194,15 +1249,44 @@ select:-webkit-autofill:focus {
   justify-content: space-around;
   align-items: center;
   width: 60%;
-  top: 65%;
+  top: 60%;
   left: 50%;
   background-color: #262626;
   transform: translateX(-50%) skewX(-30deg);
   padding: 1rem;
   animation: languageIconsAnimation 2.4s ease-in-out 2.4s backwards;
 }
+@media only screen and (max-width: 56.25em) {
+  .home-page__section-1__icons {
+    top: 58%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .home-page__section-1__icons {
+    top: 62%;
+  }
+}
+@media only screen and (max-width: 27.175em) {
+  .home-page__section-1__icons {
+    top: 63%;
+  }
+}
+@media only screen and (max-height: 36.25em) {
+  .home-page__section-1__icons {
+    top: 70%;
+  }
+}
 .home-page__section-1__icons img {
+  height: auto;
+  width: 5%;
   transform: skewX(30deg);
+}
+.home-page__section-2 {
+  background-image: linear-gradient(to right, rgba(30, 34, 51, 0.6), rgba(30, 34, 51, 0.6)), url(../images/about-bg.jpg);
+  background-position: left;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 .no-route {
   height: 100vh;
