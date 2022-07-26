@@ -1,6 +1,7 @@
 $font-dancing-script: "Dancing Script", cursive;
 $font-ubuntu-mono: "Ubuntu Mono", monospace;
 $font-viaoda-libre: "Viaoda Libre", cursive;
+$font-cormorant: "Cormorant SC", serif;
 
 $default-font-size: 1.6rem;
 // old grey color #868DA6;
@@ -8,6 +9,7 @@ $color-dark-grey: #262626;
 $color-green: #044008;
 $color-grey: #cac7c7;
 $color-grey-2: #595959;
+$color-grey-3: #d7d7d9;
 
 $color-black: #1e2233;
 $color-black-2: #1f2334;
@@ -28,6 +30,7 @@ $bg-header-mobile: url(../images/bg-header-mobile.svg);
 
 $border-radius: 5px;
 $border-radius-sm: 3px;
+$skew-angle: 30deg;
 $box-shadow: 0rem 0.4rem 0.4rem rgba($color-black-3, 0.25);
 $box-shadow-sm: 0rem 0.2rem 0.2rem rgba($color-black-3, 0.25);
 $transition-small: all 0.2s;

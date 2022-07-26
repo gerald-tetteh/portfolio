@@ -13,6 +13,10 @@
     align-items: center;
     padding-block: 2rem;
 
+    &__links,
+    &__text {
+      animation: sidebarFadeIn 0.4s ease-in;
+    }
     &__link {
       & a,
       & a:link,
@@ -32,6 +36,7 @@
     left: 22rem;
     border-bottom: 1px solid $color-grey-2;
     z-index: 10;
+    animation: navFadeIn 0.4s ease-in;
 
     &__list {
       display: flex;
@@ -85,13 +90,60 @@
     &-1 {
       position: relative;
 
-      &__image {
+      &__content {
+        @include absolute-center;
+        width: 50%;
+      }
+      &__heading {
+        text-align: center;
+        text-transform: uppercase;
+        font-family: $font-cormorant;
+        font-size: 5rem;
+        color: $color-dark-grey;
+
+        & span {
+          transform: translateY(-200px);
+          display: inline-block;
+          opacity: 0;
+          transition: all 0.2s;
+
+          &.animate-letter {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
+      }
+      &__sub-heading {
+        text-align: center;
+        font-size: 1.7rem;
+        color: lighten($color-dark-grey, 20);
+        animation: subTitleFadeIn 0.4s ease-in 2s backwards;
+      }
+      &__bar {
+        right: 6rem;
+        width: 20rem;
+        height: 2rem;
+        background-color: $color-dark-grey;
         position: absolute;
-        width: auto;
-        height: 50rem;
-        top: 5rem;
+        transform: skewX(-$skew-angle);
+        animation: headingBarAnimation 2.4s cubic-bezier(0.32, 1.66, 0.81, 0.31);
+      }
+      &__icons {
+        position: absolute;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 60%;
+        top: 65%;
         left: 50%;
-        transform: translateX(-50%);
+        background-color: $color-dark-grey;
+        transform: translateX(-50%) skewX(-$skew-angle);
+        padding: 1rem;
+        animation: languageIconsAnimation 2.4s ease-in-out 2.4s backwards;
+
+        & img {
+          transform: skewX($skew-angle);
+        }
       }
     }
     &-2 {

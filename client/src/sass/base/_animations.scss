@@ -12,3 +12,53 @@
     width: 10%;
   }
 }
+@keyframes navFadeIn {
+  from {
+    transform: translateY(-5rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes sidebarFadeIn {
+  from {
+    transform: translateX(-5rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes subTitleFadeIn {
+  from {
+    transform: translateY(10rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes headingBarAnimation {
+  from {
+    transform: skewX(-30deg) translateX(-30rem);
+    opacity: 0;
+  }
+  to {
+    transform: skewX(-30deg) translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes languageIconsAnimation {
+  from {
+    transform: translateX(-50%) skewX(0);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-50%) skewX(-$skew-angle);
+    opacity: 1;
+  }
+}

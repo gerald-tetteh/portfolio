@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400&family=Viaoda+Libre&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&display=swap");
 @keyframes lineLoaderAnimation {
   0% {
     left: -10%;
@@ -11,6 +12,56 @@
   100% {
     left: -10%;
     width: 10%;
+  }
+}
+@keyframes navFadeIn {
+  from {
+    transform: translateY(-5rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes sidebarFadeIn {
+  from {
+    transform: translateX(-5rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes subTitleFadeIn {
+  from {
+    transform: translateY(10rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes headingBarAnimation {
+  from {
+    transform: skewX(-30deg) translateX(-30rem);
+    opacity: 0;
+  }
+  to {
+    transform: skewX(-30deg) translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes languageIconsAnimation {
+  from {
+    transform: translateX(-50%) skewX(0);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-50%) skewX(-30deg);
+    opacity: 1;
   }
 }
 /* Box sizing rules */
@@ -1033,6 +1084,9 @@ select:-webkit-autofill:focus {
   align-items: center;
   padding-block: 2rem;
 }
+.home-page__sidebar__links, .home-page__sidebar__text {
+  animation: sidebarFadeIn 0.4s ease-in;
+}
 .home-page__sidebar__link a, .home-page__sidebar__link a:link, .home-page__sidebar__link a:visited {
   color: #cac7c7;
   font-size: 2rem;
@@ -1047,6 +1101,7 @@ select:-webkit-autofill:focus {
   left: 22rem;
   border-bottom: 1px solid #595959;
   z-index: 10;
+  animation: navFadeIn 0.4s ease-in;
 }
 .home-page__nav__list {
   display: flex;
@@ -1094,13 +1149,60 @@ select:-webkit-autofill:focus {
 .home-page__section-1 {
   position: relative;
 }
-.home-page__section-1__image {
+.home-page__section-1__content {
   position: absolute;
-  width: auto;
-  height: 50rem;
-  top: 5rem;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
+  width: 50%;
+}
+.home-page__section-1__heading {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Cormorant SC", serif;
+  font-size: 5rem;
+  color: #262626;
+}
+.home-page__section-1__heading span {
+  transform: translateY(-200px);
+  display: inline-block;
+  opacity: 0;
+  transition: all 0.2s;
+}
+.home-page__section-1__heading span.animate-letter {
+  transform: translateY(0);
+  opacity: 1;
+}
+.home-page__section-1__sub-heading {
+  text-align: center;
+  font-size: 1.7rem;
+  color: #595959;
+  animation: subTitleFadeIn 0.4s ease-in 2s backwards;
+}
+.home-page__section-1__bar {
+  right: 6rem;
+  width: 20rem;
+  height: 2rem;
+  background-color: #262626;
+  position: absolute;
+  transform: skewX(-30deg);
+  animation: headingBarAnimation 2.4s cubic-bezier(0.32, 1.66, 0.81, 0.31);
+}
+.home-page__section-1__icons {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 60%;
+  top: 65%;
+  left: 50%;
+  background-color: #262626;
+  transform: translateX(-50%) skewX(-30deg);
+  padding: 1rem;
+  animation: languageIconsAnimation 2.4s ease-in-out 2.4s backwards;
+}
+.home-page__section-1__icons img {
+  transform: skewX(30deg);
 }
 .no-route {
   height: 100vh;
