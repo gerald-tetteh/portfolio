@@ -48,7 +48,10 @@ const HomePage = () => {
   return (
     <div className="home-page">
       <Sidebar />
-      <nav className="home-page__nav">
+      <nav id="nav" className="home-page__nav">
+        <a href="#/" className="home-page__nav__close">
+          &times;
+        </a>
         <ul className="home-page__nav__list">
           <li className="home-page__nav__list-item">
             <a href="#about">about</a>

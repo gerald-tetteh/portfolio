@@ -6,6 +6,7 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 import { faFile } from "@fortawesome/free-regular-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Sidebar = () => {
   return (
@@ -44,6 +45,11 @@ const Sidebar = () => {
         <li className="home-page__sidebar__link">
           <a href="/cv">
             <FontAwesomeIcon icon={faFile} />
+          </a>
+        </li>
+        <li className="home-page__sidebar__link home-page__sidebar__link--bars">
+          <a href="#nav">
+            <FontAwesomeIcon icon={faBars} />
           </a>
         </li>
       </ul>

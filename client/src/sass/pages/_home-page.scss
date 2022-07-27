@@ -51,6 +51,12 @@
       & a:hover {
         color: $color-green;
       }
+      &--bars {
+        display: none;
+        @include respond(phone) {
+          display: block;
+        }
+      }
     }
   }
   &__nav {
@@ -63,12 +69,44 @@
     animation: navFadeIn 0.4s ease-in;
 
     @include respond(phone) {
-      display: none;
+      top: 0;
+      left: 0;
+      position: fixed;
+      height: 100%;
+      width: 0;
+      background-color: $color-dark-grey;
+      overflow-x: hidden;
+      z-index: 999;
+      transition: all 0.2s;
     }
 
+    @include respond(phone) {
+      &:target {
+        width: 100%;
+      }
+      &:target &__close {
+        position: absolute;
+        right: 5rem;
+        top: 1rem;
+        text-decoration: none;
+        font-size: 9rem;
+        color: $color-red;
+        display: inline;
+      }
+    }
+    &__close {
+      display: none;
+    }
     &__list {
       display: flex;
       justify-content: end;
+
+      @include respond(phone) {
+        @include absolute-center;
+        flex-direction: column;
+        text-align: center;
+        font-size: 3rem;
+      }
 
       &-item {
         margin-inline: 1rem;
@@ -80,6 +118,10 @@
         & a:visited {
           color: $color-grey-2;
           text-decoration: none;
+
+          @include respond(phone) {
+            color: $color-white;
+          }
 
           &::before {
             content: "";

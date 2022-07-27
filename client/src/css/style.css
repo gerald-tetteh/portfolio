@@ -1122,6 +1122,14 @@ select:-webkit-autofill:focus {
 .home-page__sidebar__link a:hover {
   color: #21de34;
 }
+.home-page__sidebar__link--bars {
+  display: none;
+}
+@media only screen and (max-width: 37.5em) {
+  .home-page__sidebar__link--bars {
+    display: block;
+  }
+}
 .home-page__nav {
   position: absolute;
   top: 3rem;
@@ -1133,12 +1141,48 @@ select:-webkit-autofill:focus {
 }
 @media only screen and (max-width: 37.5em) {
   .home-page__nav {
-    display: none;
+    top: 0;
+    left: 0;
+    position: fixed;
+    height: 100%;
+    width: 0;
+    background-color: #262626;
+    overflow-x: hidden;
+    z-index: 999;
+    transition: all 0.2s;
   }
+}
+@media only screen and (max-width: 37.5em) {
+  .home-page__nav:target {
+    width: 100%;
+  }
+  .home-page__nav:target .home-page__nav__close {
+    position: absolute;
+    right: 5rem;
+    top: 1rem;
+    text-decoration: none;
+    font-size: 9rem;
+    color: #ac3b44;
+    display: inline;
+  }
+}
+.home-page__nav__close {
+  display: none;
 }
 .home-page__nav__list {
   display: flex;
   justify-content: end;
+}
+@media only screen and (max-width: 37.5em) {
+  .home-page__nav__list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    text-align: center;
+    font-size: 3rem;
+  }
 }
 .home-page__nav__list-item {
   margin-inline: 1rem;
@@ -1148,6 +1192,11 @@ select:-webkit-autofill:focus {
 .home-page__nav__list-item a, .home-page__nav__list-item a:link, .home-page__nav__list-item a:visited {
   color: #595959;
   text-decoration: none;
+}
+@media only screen and (max-width: 37.5em) {
+  .home-page__nav__list-item a, .home-page__nav__list-item a:link, .home-page__nav__list-item a:visited {
+    color: #fff;
+  }
 }
 .home-page__nav__list-item a::before, .home-page__nav__list-item a:link::before, .home-page__nav__list-item a:visited::before {
   content: "";
