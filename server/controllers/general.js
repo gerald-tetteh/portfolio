@@ -12,6 +12,6 @@ exports.getCv = (req, res, next) =>
       "..",
       "public",
       "documents",
-      "Gerald_Addo-Tetteh_cv.pdf"
+      "Addo-Tetteh,Gerald - cv.pdf"
     )
   );

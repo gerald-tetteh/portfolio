@@ -9,8 +9,9 @@ import chefIcon from "../images/chef.png";
 import weatherStationIcon from "../images/station.jpg";
 import boatIcon from "../images/boat_image.png";
 import alarmIcon from "../images/fire_alarm.jpg";
-import tunrtableIcon from "../images/turntable_icon.jpg";
+import tunrtableIcon from "../images/turntable_icon.png";
 import vodafoneIcon from "../images/vodafone.svg";
+import springBoot from "../images/spring_boot.png";
 import nyahoIcon from "../images/nyaho.png";
 import charlotteIcon from "../images/charlotte.svg";
 import todoIcon from "../images/todo.png";
@@ -33,6 +34,13 @@ export const skills = [
     heading: "Web Applications with Node js",
     content:
       "I use Node js, Express and React to develop responsive and aesthetically pleasing web applications such as this portfolio.",
+  },
+  {
+    alt: "Spring Boot Icon",
+    icon: springBoot,
+    heading: "Web Applications with Spring Boot.",
+    content:
+      "I use Java with Spring Boot to develop scalable and responsive web applications. I also have experience with microservices.",
   },
   {
     alt: "Python Icon",
@@ -140,7 +148,14 @@ export const schoolProjects = [
 ];
 export const workExperience = [
   {
-    alt: "Turntable",
+    alt: "Turntabl",
+    heading: "Software Engineer",
+    icon: tunrtableIcon,
+    content:
+      "Worked as a software engineer on in-house and client projects such as those of Morgan Stanley. Used technologies such as Kafka, Spring Boot and Scala. Projects also involved using cloud technologies and microservices.",
+  },
+  {
+    alt: "Turntabl",
     heading: "Software Engineering Intern",
     icon: tunrtableIcon,
     content:

@@ -88,7 +88,7 @@ const Home = () => {
             Gerald <br /> Addo-Tetteh
           </h1>
           <p className="home__text-sub">
-            Web Developer / Flutter Developer / Electrical Engineering Student
+            Software Engineer / Web Developer / Flutter Developer
           </p>
           <div className="home__icons">
             <a
@@ -108,7 +108,7 @@ const Home = () => {
               <img src={githubImage} alt="Github Icon" />
             </a>
             <a
-              href="https://www.linkedin.com/in/gerald-addo-tetteh-a28101182/"
+              href="https://www.linkedin.com/in/gerald-addo-tetteh"
               rel="noreferrer"
               target="_blank"
               className="home__icon home__icon--3"
@@ -142,13 +142,14 @@ const Home = () => {
               I am familiar with the programming languages:{" "}
               <span className="color-gold">Python</span>,{" "}
               <span className="color-green">Javascript</span>,{" "}
+              <span className="color-purple">Typescript</span>,{" "}
+              <span className="color-orange">Java / Scala</span>,{" "}
               <span className="color-blue">Dart</span> and{" "}
-              <span className="color-brown">C</span>.
+              <span className="color-brown">C / C++</span>.
             </p>
             <p className="about-me__text">
-              I am studying{" "}
-              <span className="color-orange">electrical engineering</span> at
-              Ashesi University, and I also build websites and{" "}
+              I am <span className="color-orange">software engineer</span> at
+              turntabl, and I also build websites and{" "}
               <span className="color-green-pale">android applications</span>.
               Below is some of my work.
             </p>

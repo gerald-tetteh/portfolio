@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="container">
         <h1 className="footer__heading">gerald addo-tetteh</h1>
         <p className="footer__sub-heading">
-          Web Developer / Flutter Developer / Electrical Engineering Student
+          Software Engineer / Web Developer / Flutter Developer
         </p>
       </div>
       <div className="footer__social">
